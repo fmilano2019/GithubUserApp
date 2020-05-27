@@ -9,12 +9,7 @@ import com.example.githubuserapp.R
 import com.example.githubuserapp.model.User
 import kotlinx.android.synthetic.main.item_user.view.*
 
-class ListUserAdapter(private var listUser: ArrayList<User>) : RecyclerView.Adapter<ListUserAdapter.ViewHolder>() {
-
-    fun setData(data: ArrayList<User>) {
-        listUser.clear()
-        listUser.addAll(data)
-    }
+class ListUserAdapter(private var users: ArrayList<User>) : RecyclerView.Adapter<ListUserAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListUserAdapter.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_user, parent, false)
@@ -22,11 +17,11 @@ class ListUserAdapter(private var listUser: ArrayList<User>) : RecyclerView.Adap
     }
 
     override fun getItemCount(): Int {
-        return listUser.size
+        return users.size
     }
 
     override fun onBindViewHolder(holder: ListUserAdapter.ViewHolder, position: Int) {
-        holder.bind(listUser[position])
+        holder.bind(users[position])
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -38,6 +33,13 @@ class ListUserAdapter(private var listUser: ArrayList<User>) : RecyclerView.Adap
                     .load(user.avatarUrl)
                     .into(iv_item_avatar)
             }
+        }
+    }
+
+    fun addUsers(users: ArrayList<User>) {
+        this.users.apply {
+            clear()
+            addAll(users)
         }
     }
 

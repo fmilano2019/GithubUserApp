@@ -1,18 +1,21 @@
 package com.example.githubuserapp.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.githubuserapp.model.User
+import androidx.lifecycle.liveData
+import com.example.githubuserapp.repository.UserRepository
+import com.example.githubuserapp.utils.Resource
+import kotlinx.coroutines.Dispatchers
+import java.lang.Exception
 
-class MainViewModel : ViewModel() {
-    private val users = MutableLiveData<ArrayList<User>>()
+class MainViewModel(private val userRepository: UserRepository) : ViewModel() {
 
-    fun getUsers(): LiveData<ArrayList<User>> {
-        return users
+    fun loadUsers() = liveData(Dispatchers.IO) {
+        emit(Resource.loading(null))
+        try {
+            emit(Resource.success(userRepository.getUsers()))
+        } catch (e: Exception) {
+            emit(Resource.error(e.localizedMessage ?: "Error", null))
+        }
     }
 
-    private fun loadUsers() {
-
-    }
 }
