@@ -46,19 +46,30 @@ class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
     private fun setupObservers() {
         mainViewModel.setUsers()
         mainViewModel.getUsers().observe(this@MainActivity, Observer {
-            pb_main.visibility = View.GONE
-            srl_main.isRefreshing = false
+            isLoading(false)
             adapter.addUsers(it)
         })
         mainViewModel.getMessage().observe(this@MainActivity, Observer {
-            pb_main.visibility = View.GONE
-            srl_main.isRefreshing = false
+            isLoading(false)
             snackbar(coordinatorLayout, it)
         })
     }
 
     override fun onRefresh() {
         mainViewModel.setUsers()
+    }
+
+    fun isLoading(state: Boolean) {
+        when(state) {
+            true -> {
+                pb_main.visibility = View.VISIBLE
+                srl_main.isRefreshing = true
+            }
+            false -> {
+                pb_main.visibility = View.GONE
+                srl_main.isRefreshing = false
+            }
+        }
     }
 
 }
