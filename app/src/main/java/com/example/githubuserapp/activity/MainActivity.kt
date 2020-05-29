@@ -1,23 +1,19 @@
 package com.example.githubuserapp.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.githubuserapp.R
 import com.example.githubuserapp.adapter.ListUserAdapter
-import com.example.githubuserapp.api.ApiHelper
-import com.example.githubuserapp.api.RetrofitBuilder
-import com.example.githubuserapp.model.User
-import com.example.githubuserapp.utils.Status
+import com.example.githubuserapp.util.snackbar
 import com.example.githubuserapp.viewmodel.MainViewModel
-import com.example.githubuserapp.viewmodel.ViewModelFactory
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
 
     companion object {
         const val TOKEN = "token 1f86f3a2e7360e2e52f41f3c9de2c6cfd13c4d9f"
@@ -29,57 +25,40 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        isLoading(true)
         setupViewModel()
         setUI()
         setupObservers()
     }
 
     private fun setupViewModel() {
-        mainViewModel = ViewModelProvider(this, ViewModelFactory(ApiHelper(RetrofitBuilder().apiService))).get(MainViewModel::class.java)
+        mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MainViewModel::class.java)
     }
 
     private fun setUI() {
+        pb_main.visibility = View.VISIBLE
         rv_main.setHasFixedSize(true)
-        rv_main.layoutManager = LinearLayoutManager(this)
+        rv_main.layoutManager = LinearLayoutManager(this@MainActivity)
         adapter = ListUserAdapter(arrayListOf())
         rv_main.adapter = adapter
+        srl_main.setOnRefreshListener(this@MainActivity)
     }
 
     private fun setupObservers() {
-        mainViewModel.loadUsers().observe(this, Observer {
-            it?.let { resource ->
-                when(resource.status) {
-                    Status.SUCCESS -> {
-                        rv_main.visibility = View.VISIBLE
-                        isLoading(false)
-                        resource.data?.let { users -> retriveList(users)}
-                    }
-                    Status.LOADING -> {
-                        isLoading(true)
-                        rv_main.visibility = View.GONE
-                    }
-                    Status.ERROR -> {
-                        rv_main.visibility = View.VISIBLE
-                        isLoading(false)
-                        Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
-                    }
-                }
-            }
+        mainViewModel.setUsers()
+        mainViewModel.getUsers().observe(this@MainActivity, Observer {
+            pb_main.visibility = View.GONE
+            srl_main.isRefreshing = false
+            adapter.addUsers(it)
+        })
+        mainViewModel.getMessage().observe(this@MainActivity, Observer {
+            pb_main.visibility = View.GONE
+            srl_main.isRefreshing = false
+            snackbar(coordinatorLayout, it)
         })
     }
 
-    private fun retriveList(users: ArrayList<User>) {
-        adapter.apply {
-            addUsers(users)
-            notifyDataSetChanged()
-        }
+    override fun onRefresh() {
+        mainViewModel.setUsers()
     }
 
-    private fun isLoading(state: Boolean) {
-        when(state) {
-            true -> pb_main.visibility = View.VISIBLE
-            false -> pb_main.visibility = View.GONE
-        }
-    }
 }

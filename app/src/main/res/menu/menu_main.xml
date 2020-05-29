@@ -3,12 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/it_search"
         android:icon="@drawable/ic_search_white_24dp"
         android:title="@string/search"
         app:showAsAction="collapseActionView|always"
         app:actionViewClass="androidx.appcompat.widget.SearchView" />
-    <item
-        android:id="@+id/it_language"
-        android:title="@string/change_language"/>
+    <item android:title="@string/change_language"/>
 </menu>

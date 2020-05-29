@@ -36,11 +36,10 @@ class ListUserAdapter(private var users: ArrayList<User>) : RecyclerView.Adapter
         }
     }
 
-    fun addUsers(users: ArrayList<User>) {
-        this.users.apply {
-            clear()
-            addAll(users)
-        }
+    fun addUsers(data: ArrayList<User>) {
+        users.clear()
+        users.addAll(data)
+        notifyDataSetChanged()
     }
 
 }

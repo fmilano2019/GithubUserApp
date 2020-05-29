@@ -4,10 +4,4 @@
     <string name="search">Search</string>
     <string name="content_description_user">content_description_user</string>
     <string name="tag_username">#</string>
-    <string name="btn_follow">Follow</string>
-    <string name="content_description_company">Content Description Company</string>
-    <string name="content_description_location">Content Description Location</string>
-    <string name="tv_repositories">Repositories</string>
-    <string name="tv_followers">Followers</string>
-    <string name="tv_following">Following</string>
 </resources>
