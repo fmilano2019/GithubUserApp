@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DetailActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:liftOnScroll="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="@color/colorPrimary"
+                app:expandedTitleGravity="top"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cv_detail_container_avatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        app:cardCornerRadius="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tb_detail">
+
+                        <ImageView
+                            android:id="@+id/iv_detail_avatar"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:contentDescription="@string/content_description_user"
+                            tools:src="@drawable/ic_launcher_background" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_detail_company"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_toEndOf="@id/iv_detail_company"
+                        android:textColor="@color/colorSecondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_detail_company"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/iv_detail_company"
+                        app:layout_constraintTop_toTopOf="@+id/iv_detail_company"
+                        tools:text="Google, inc." />
+
+                    <ImageView
+                        android:id="@+id/iv_detail_company"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:contentDescription="@string/content_description_company"
+                        android:src="@drawable/ic_people_black_24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cv_detail_container_avatar" />
+
+                    <ImageView
+                        android:id="@+id/iv_detail_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:contentDescription="@string/content_description_location"
+                        android:src="@drawable/ic_location_on_black_24dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_detail_location"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_detail_location" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_detail_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="20dp"
+                        android:maxLines="1"
+                        android:textColor="@color/colorSecondary"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_detail_follow"
+                        app:layout_constraintStart_toEndOf="@+id/cv_detail_container_avatar"
+                        app:layout_constraintTop_toTopOf="@+id/cv_detail_container_avatar"
+                        tools:text="Jake Wharton" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_detail_username"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:maxLines="1"
+                        android:textColor="@color/colorSecondaryMediumDark"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_detail_follow"
+                        app:layout_constraintStart_toEndOf="@+id/materialTextView2"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_detail_name"
+                        tools:text="tipsy" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_detail_location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_toEndOf="@id/iv_detail_location"
+                        android:textColor="@color/colorSecondary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iv_detail_location"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_detail_company"
+                        tools:text="Yogyakarta, Indonesia" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_detail_follow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="34dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="@string/btn_follow"
+                        app:backgroundTint="@color/colorPrimaryLight"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tb_detail"
+                        app:rippleColor="@color/colorAccent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/materialTextView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/tag_username"
+                        android:textColor="@color/colorSecondaryMediumDark"
+                        app:layout_constraintStart_toEndOf="@+id/cv_detail_container_avatar"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_detail_name" />
+
+                    <com.google.android.material.appbar.MaterialToolbar
+                        android:id="@+id/tb_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:navigationIcon="@drawable/ic_arrow_back_white_24dp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_detail_follower"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorSecondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/materialTextView4"
+                        app:layout_constraintTop_toBottomOf="@+id/materialTextView4"
+                        tools:text="25922" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_detail_repository"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:textColor="@color/colorSecondary"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/materialTextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/materialTextView3"
+                        tools:text="35" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_detail_following"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorSecondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/materialTextView5"
+                        app:layout_constraintTop_toBottomOf="@+id/materialTextView5"
+                        tools:text="14" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/materialTextView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:text="@string/tv_followers"
+                        android:textColor="@color/colorSecondaryDark"
+                        app:layout_constraintStart_toEndOf="@+id/materialTextView3"
+                        app:layout_constraintTop_toTopOf="@+id/materialTextView3" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/materialTextView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/tv_repositories"
+                        android:textColor="@color/colorSecondaryDark"
+                        app:layout_constraintStart_toStartOf="@+id/iv_detail_location"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_detail_location" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/materialTextView5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:text="@string/tv_following"
+                        android:textColor="@color/colorSecondaryDark"
+                        app:layout_constraintStart_toEndOf="@+id/materialTextView4"
+                        app:layout_constraintTop_toTopOf="@+id/materialTextView3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
