@@ -28,7 +28,7 @@
                 android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
                 app:layout_scrollFlags="scroll|enterAlways|snap"
                 app:navigationIcon="@drawable/ic_menu_white_24dp"
-                app:title="Github User" />
+                app:title="Users" />
 
         </com.google.android.material.appbar.AppBarLayout>
 

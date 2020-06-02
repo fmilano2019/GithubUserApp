@@ -105,6 +105,7 @@ class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener,
     }
 
     override fun onQueryTextSubmit(query: String?): Boolean {
+        pb_main.visibility = View.VISIBLE
         setupQueryObservers(query)
         return true
     }

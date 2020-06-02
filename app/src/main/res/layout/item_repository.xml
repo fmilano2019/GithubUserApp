@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="Overdraw">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_repo_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:maxLines="1"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/myrepo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_repo_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/colorSecondaryExtraDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_item_repo_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_repo_name"
+        tools:text="@string/lorem_ipsum" />
+
+    <ImageView
+        android:id="@+id/iv_item_repo_language"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/content_description_repo_language"
+        android:src="@drawable/ic_round_1_gold_24dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_item_repo_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_repo_description" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_repo_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/iv_item_repo_language"
+        android:textColor="@color/colorSecondaryExtraDark"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_item_repo_language"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_repo_language"
+        app:layout_constraintTop_toTopOf="@+id/iv_item_repo_language"
+        tools:text="@string/java" />
+
+    <ImageView
+        android:id="@+id/iv_item_repo_star"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/tv_item_repo_language"
+        android:contentDescription="@string/content_description_repo_star"
+        android:src="@drawable/ic_star_black_24dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_item_repo_language"
+        app:layout_constraintTop_toTopOf="@+id/iv_item_repo_language" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_repo_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/iv_item_repo_star"
+        android:textColor="@color/colorSecondaryExtraDark"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_item_repo_language"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_repo_star"
+        app:layout_constraintTop_toTopOf="@+id/iv_item_repo_language"
+        tools:text="@string/star_number" />
+
+    <ImageView
+        android:id="@+id/iv_item_repo_fork"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/tv_item_repo_star"
+        android:contentDescription="@string/content_description_repo_star"
+        android:src="@drawable/ic_fork"
+        android:tint="@color/colorSecondaryExtraDark"
+        app:layout_constraintStart_toEndOf="@+id/tv_item_repo_star"
+        app:layout_constraintTop_toTopOf="@+id/iv_item_repo_language" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_repo_fork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_toEndOf="@id/iv_item_repo_fork"
+        android:textColor="@color/colorSecondaryExtraDark"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_item_repo_language"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_repo_fork"
+        app:layout_constraintTop_toTopOf="@+id/iv_item_repo_language"
+        tools:text="@string/fork_number" />
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorSecondaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_item_repo_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_repo_language" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

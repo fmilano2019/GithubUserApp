@@ -30,13 +30,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <ProgressBar
+                        android:id="@+id/pb_detail"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/colorAccent"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tb_detail" />
+
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/cv_detail_container_avatar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
                         app:cardCornerRadius="5dp"
+                        app:layout_constraintBottom_toTopOf="@+id/guideline"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tb_detail">
 
@@ -54,10 +69,10 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
-                        android:layout_marginTop="3dp"
                         android:layout_marginEnd="20dp"
                         android:layout_toEndOf="@id/iv_detail_company"
                         android:textColor="@color/colorSecondary"
+                        android:visibility="invisible"
                         app:layout_constraintBottom_toBottomOf="@+id/iv_detail_company"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
@@ -71,11 +86,11 @@
                         android:layout_height="16dp"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
                         android:contentDescription="@string/content_description_company"
                         android:src="@drawable/ic_people_black_24dp"
+                        android:visibility="invisible"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/cv_detail_container_avatar" />
+                        app:layout_constraintTop_toTopOf="@+id/guideline" />
 
                     <ImageView
                         android:id="@+id/iv_detail_location"
@@ -83,11 +98,12 @@
                         android:layout_height="16dp"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
                         android:contentDescription="@string/content_description_location"
                         android:src="@drawable/ic_location_on_black_24dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/tv_detail_location"
+                        android:visibility="invisible"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/tv_detail_location" />
+                        app:layout_constraintTop_toBottomOf="@+id/iv_detail_company" />
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/tv_detail_name"
@@ -99,6 +115,7 @@
                         android:maxLines="1"
                         android:textColor="@color/colorSecondary"
                         android:textSize="16sp"
+                        android:ellipsize="end"
                         app:layout_constraintEnd_toStartOf="@+id/btn_detail_follow"
                         app:layout_constraintStart_toEndOf="@+id/cv_detail_container_avatar"
                         app:layout_constraintTop_toTopOf="@+id/cv_detail_container_avatar"
@@ -112,7 +129,7 @@
                         android:maxLines="1"
                         android:textColor="@color/colorSecondaryMediumDark"
                         app:layout_constraintEnd_toStartOf="@+id/btn_detail_follow"
-                        app:layout_constraintStart_toEndOf="@+id/materialTextView2"
+                        app:layout_constraintStart_toEndOf="@+id/tv_detail_tag_username"
                         app:layout_constraintTop_toBottomOf="@+id/tv_detail_name"
                         tools:text="tipsy" />
 
@@ -121,13 +138,14 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"
-                        android:layout_marginTop="5dp"
                         android:layout_marginEnd="20dp"
                         android:layout_toEndOf="@id/iv_detail_location"
                         android:textColor="@color/colorSecondary"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_detail_location"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/iv_detail_location"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_detail_company"
+                        app:layout_constraintTop_toTopOf="@+id/iv_detail_location"
                         tools:text="Yogyakarta, Indonesia" />
 
                     <com.google.android.material.button.MaterialButton
@@ -145,12 +163,13 @@
                         app:rippleColor="@color/colorAccent" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/materialTextView2"
+                        android:id="@+id/tv_detail_tag_username"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:text="@string/tag_username"
                         android:textColor="@color/colorSecondaryMediumDark"
+                        android:visibility="invisible"
                         app:layout_constraintStart_toEndOf="@+id/cv_detail_container_avatar"
                         app:layout_constraintTop_toBottomOf="@+id/tv_detail_name" />
 
@@ -169,8 +188,8 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorSecondary"
                         android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="@+id/materialTextView4"
-                        app:layout_constraintTop_toBottomOf="@+id/materialTextView4"
+                        app:layout_constraintStart_toStartOf="@+id/tv_detail_tag_followers"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_detail_tag_followers"
                         tools:text="25922" />
 
                     <com.google.android.material.textview.MaterialTextView
@@ -181,8 +200,8 @@
                         android:textColor="@color/colorSecondary"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/materialTextView3"
-                        app:layout_constraintTop_toBottomOf="@+id/materialTextView3"
+                        app:layout_constraintStart_toStartOf="@+id/tv_detail_tag_repo"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_detail_tag_repo"
                         tools:text="35" />
 
                     <com.google.android.material.textview.MaterialTextView
@@ -191,49 +210,70 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorSecondary"
                         android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="@+id/materialTextView5"
-                        app:layout_constraintTop_toBottomOf="@+id/materialTextView5"
+                        app:layout_constraintStart_toStartOf="@+id/tv_detail_tag_following"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_detail_tag_following"
                         tools:text="14" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/materialTextView4"
+                        android:id="@+id/tv_detail_tag_followers"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="50dp"
                         android:text="@string/tv_followers"
                         android:textColor="@color/colorSecondaryDark"
-                        app:layout_constraintStart_toEndOf="@+id/materialTextView3"
-                        app:layout_constraintTop_toTopOf="@+id/materialTextView3" />
+                        android:visibility="invisible"
+                        app:layout_constraintStart_toEndOf="@+id/tv_detail_tag_repo"
+                        app:layout_constraintTop_toTopOf="@+id/tv_detail_tag_repo" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/materialTextView3"
+                        android:id="@+id/tv_detail_tag_repo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
                         android:layout_marginTop="30dp"
                         android:text="@string/tv_repositories"
                         android:textColor="@color/colorSecondaryDark"
-                        app:layout_constraintStart_toStartOf="@+id/iv_detail_location"
+                        android:visibility="invisible"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_detail_location" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/materialTextView5"
+                        android:id="@+id/tv_detail_tag_following"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="70dp"
                         android:text="@string/tv_following"
                         android:textColor="@color/colorSecondaryDark"
-                        app:layout_constraintStart_toEndOf="@+id/materialTextView4"
-                        app:layout_constraintTop_toTopOf="@+id/materialTextView3" />
+                        android:visibility="invisible"
+                        app:layout_constraintStart_toEndOf="@+id/tv_detail_tag_followers"
+                        app:layout_constraintTop_toTopOf="@+id/tv_detail_tag_repo" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_begin="162dp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="scrollable"
+                app:tabUnboundedRipple="true"
+                android:textAlignment="center"
+                style="@style/Widget.MaterialComponents.TabLayout.Colored"/>
+
         </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.viewpager2.widget.ViewPager2
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager_detail"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

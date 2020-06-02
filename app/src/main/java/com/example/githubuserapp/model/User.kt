@@ -1,10 +1,7 @@
 package com.example.githubuserapp.model
 
-import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-import kotlinx.android.parcel.Parcelize
 
-@Parcelize
 data class User(
     @SerializedName("id")
     var id: Int?,
@@ -13,5 +10,23 @@ data class User(
     var username: String?,
 
     @SerializedName("avatar_url")
-    var avatarUrl: String?
-) : Parcelable
+    var avatarUrl: String?,
+
+    @SerializedName("name")
+    var name: String?,
+
+    @SerializedName("company")
+    var company: String?,
+
+    @SerializedName("location")
+    var location: String?,
+
+    @SerializedName("public_repos")
+    var repos: Int?,
+
+    @SerializedName("followers")
+    var followers: Int?,
+
+    @SerializedName("following")
+    var following: Int?
+)
