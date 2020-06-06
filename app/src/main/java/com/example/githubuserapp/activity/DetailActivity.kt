@@ -50,7 +50,11 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         reposFragment = ReposFragment()
         followersFragment = FollowersFragment()
         followingFragment = FollowingFragment()
-        val pagerTitles = arrayListOf("Repository", "Followers", "Following")
+        val pagerTitles = arrayListOf(
+            resources.getString(R.string.tv_repositories),
+            resources.getString(R.string.tv_followers),
+            resources.getString(R.string.tv_following)
+        )
         val pagerFragments = arrayListOf(reposFragment, followersFragment, followingFragment)
         viewPagerAdapter = ViewPagerAdapter(
             pagerTitles,

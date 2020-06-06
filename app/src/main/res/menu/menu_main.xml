@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
@@ -7,6 +8,10 @@
         android:icon="@drawable/ic_search_white_24dp"
         android:title="@string/search"
         app:showAsAction="collapseActionView|always"
-        app:actionViewClass="androidx.appcompat.widget.SearchView" />
-    <item android:title="@string/change_language"/>
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        tools:ignore="AlwaysShowAction" />
+    <item
+        android:id="@+id/action_change_language"
+        android:title="@string/change_language"
+        app:showAsAction="never"/>
 </menu>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Github User App</string>
+    <string name="change_language">Ganti Bahasa</string>
+    <string name="search">Cari</string>
+    <string name="content_description_user">Deskripsi Konten User</string>
+    <!--suppress AndroidDomInspection -->
+    <string name="tag_username">@</string>
+    <string name="tag_id">#</string>
+    <string name="search_hint">Cari user</string>
+    <string name="btn_follow">Ikuti</string>
+    <string name="content_description_company">Deskripsi Konten Perusahaan</string>
+    <string name="content_description_location">Deskripsi Konten Lokasi</string>
+    <string name="tv_repositories">Repositori</string>
+    <string name="tv_followers">Pengikut</string>
+    <string name="tv_following">Mengikuti</string>
+    <string name="myrepo">RepoKu</string>
+    <string name="lorem_ipsum">Lorem ipsum dorol sit amet, consectetur adipiscing elit.</string>
+    <string name="content_description_repo_language">Deskripsi Konten Repo Bahasa</string>
+    <string name="java">Java</string>
+    <string name="content_description_repo_star">Deskripsi Konten Repo Bintang</string>
+    <string name="star_number">130</string>
+    <string name="fork_number">80</string>
+    <string name="toolbar_title">Pengguna</string>
+</resources>

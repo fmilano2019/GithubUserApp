@@ -28,7 +28,7 @@
                 android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
                 app:layout_scrollFlags="scroll|enterAlways|snap"
                 app:navigationIcon="@drawable/ic_menu_white_24dp"
-                app:title="Users" />
+                app:title="@string/toolbar_title" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
