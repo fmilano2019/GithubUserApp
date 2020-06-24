@@ -21,4 +21,8 @@ class MainViewModel : ViewModel() {
         userRepository.setQueryUsers(username)
     }
 
+    fun clearMessage() {
+        userRepository.clearMessage()
+    }
+
 }

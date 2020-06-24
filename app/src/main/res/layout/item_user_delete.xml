@@ -34,10 +34,9 @@
         android:id="@+id/tv_item_delete_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
         android:maxLines="1"
         android:textColor="@color/colorSecondaryExtraDark"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_item_delete_username"
         app:layout_constraintStart_toEndOf="@+id/materialTextView"
         app:layout_constraintTop_toTopOf="@+id/materialTextView"
         tools:text="1" />
@@ -58,14 +57,25 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="20dp"
         android:maxLines="1"
         android:textColor="@color/colorPrimary"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toStartOf="@+id/ib_item_delete"
         app:layout_constraintStart_toEndOf="@+id/cv_item_container_avatar"
         app:layout_constraintTop_toTopOf="@+id/cv_item_container_avatar"
         tools:text="tipsy" />
+
+    <ImageButton
+        android:id="@+id/ib_item_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/ic_baseline_delete_24"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@string/content_description_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

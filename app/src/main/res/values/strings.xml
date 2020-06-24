@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Github User App</string>
-    <string name="change_language">Change Language</string>
+    <string name="settings">Settings</string>
     <string name="search">Search</string>
     <string name="content_description_user">Content Description User</string>
     <!--suppress AndroidDomInspection -->
     <string name="tag_username">@</string>
     <string name="tag_id">#</string>
     <string name="search_hint">Search users</string>
-    <string name="btn_follow">Follow</string>
+    <string name="favorited">Favorited</string>
     <string name="content_description_company">Content Description Company</string>
     <string name="content_description_location">Content Description Location</string>
     <string name="tv_repositories">Repositories</string>
@@ -21,4 +21,12 @@
     <string name="star_number">130</string>
     <string name="fork_number">80</string>
     <string name="toolbar_title">Users</string>
+    <string name="notification_category">Notification</string>
+    <string name="reminder_preference_title">Enable reminder notification</string>
+    <string name="language_category">Language</string>
+    <string name="language_preference_title">Change language</string>
+    <string name="reminder_time_title">Set Reminder Time</string>
+    <string name="favorite">Favorite</string>
+    <string name="empty">Empty</string>
+    <string name="content_description_delete">content_description_delete</string>
 </resources>

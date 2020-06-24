@@ -42,18 +42,21 @@ class FollowingFragment : Fragment() {
             adapter.addUsers(it)
         })
         detailViewModel.getMessage().observe(viewLifecycleOwner, Observer {
-            pb_following.visibility = View.GONE
+            if (it != null) {
+                pb_following.visibility = View.GONE
+            }
         })
+        detailViewModel.clearMessage()
     }
 
     private fun setupViewModel() {
-        detailViewModel = activity?.let { ViewModelProvider(it, ViewModelProvider.NewInstanceFactory()).get(
-            DetailViewModel::class.java) }!!
+        detailViewModel = ViewModelProvider(requireActivity(), ViewModelProvider.NewInstanceFactory()).get(DetailViewModel::class.java)
     }
 
     private fun setupUI() {
+        pb_following.visibility = View.VISIBLE
         rv_following.setHasFixedSize(true)
-        rv_following.layoutManager = LinearLayoutManager(this.context)
+        rv_following.layoutManager = LinearLayoutManager(context)
         adapter = ListUserAdapter(arrayListOf()) {}
         rv_following.adapter = adapter
     }

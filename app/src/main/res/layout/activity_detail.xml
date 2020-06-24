@@ -17,11 +17,13 @@
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/bg_round_bottom"
             app:liftOnScroll="true">
 
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
                 app:contentScrim="@color/colorPrimary"
                 app:expandedTitleGravity="top"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
@@ -41,7 +43,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tb_detail" />
+                        app:layout_constraintTop_toBottomOf="@+id/mt_detail" />
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/cv_detail_container_avatar"
@@ -50,10 +52,10 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="30dp"
                         android:layout_marginBottom="20dp"
-                        app:cardCornerRadius="5dp"
+                        app:cardCornerRadius="8dp"
                         app:layout_constraintBottom_toTopOf="@+id/guideline"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tb_detail">
+                        app:layout_constraintTop_toBottomOf="@+id/mt_detail">
 
                         <ImageView
                             android:id="@+id/iv_detail_avatar"
@@ -116,7 +118,7 @@
                         android:textColor="@color/colorSecondary"
                         android:textSize="16sp"
                         android:ellipsize="end"
-                        app:layout_constraintEnd_toStartOf="@+id/btn_detail_follow"
+                        app:layout_constraintEnd_toStartOf="@+id/btg_detail_favorite"
                         app:layout_constraintStart_toEndOf="@+id/cv_detail_container_avatar"
                         app:layout_constraintTop_toTopOf="@+id/cv_detail_container_avatar"
                         tools:text="Jake Wharton" />
@@ -128,7 +130,7 @@
                         android:layout_marginEnd="20dp"
                         android:maxLines="1"
                         android:textColor="@color/colorSecondaryMediumDark"
-                        app:layout_constraintEnd_toStartOf="@+id/btn_detail_follow"
+                        app:layout_constraintEnd_toStartOf="@+id/btg_detail_favorite"
                         app:layout_constraintStart_toEndOf="@+id/tv_detail_tag_username"
                         app:layout_constraintTop_toBottomOf="@+id/tv_detail_name"
                         tools:text="tipsy" />
@@ -147,20 +149,29 @@
                         app:layout_constraintStart_toEndOf="@+id/iv_detail_location"
                         app:layout_constraintTop_toTopOf="@+id/iv_detail_location"
                         tools:text="Yogyakarta, Indonesia" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btn_detail_follow"
+                    
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/btg_detail_favorite"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mt_detail"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="34dp"
                         android:layout_marginEnd="20dp"
-                        android:text="@string/btn_follow"
-                        app:backgroundTint="@color/colorPrimaryLight"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tb_detail"
-                        app:rippleColor="@color/colorAccent" />
+                        app:singleSelection="true">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_detail_favorite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/favorite"
+                            app:backgroundTint="@color/colorPrimaryLight"
+                            app:cornerRadius="8dp"
+                            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/tv_detail_tag_username"
@@ -174,7 +185,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/tv_detail_name" />
 
                     <com.google.android.material.appbar.MaterialToolbar
-                        android:id="@+id/tb_detail"
+                        android:id="@+id/mt_detail"
                         android:layout_width="match_parent"
                         android:layout_height="?attr/actionBarSize"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -218,10 +229,10 @@
                         android:id="@+id/tv_detail_tag_followers"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="50dp"
                         android:text="@string/tv_followers"
                         android:textColor="@color/colorSecondaryDark"
                         android:visibility="invisible"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_detail_tag_following"
                         app:layout_constraintStart_toEndOf="@+id/tv_detail_tag_repo"
                         app:layout_constraintTop_toTopOf="@+id/tv_detail_tag_repo" />
 
@@ -241,11 +252,11 @@
                         android:id="@+id/tv_detail_tag_following"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="70dp"
+                        android:layout_marginEnd="20dp"
                         android:text="@string/tv_following"
                         android:textColor="@color/colorSecondaryDark"
                         android:visibility="invisible"
-                        app:layout_constraintStart_toEndOf="@+id/tv_detail_tag_followers"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_detail_tag_repo" />
 
                     <androidx.constraintlayout.widget.Guideline
@@ -263,9 +274,14 @@
                 android:id="@+id/tab_detail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:tabMode="scrollable"
-                app:tabUnboundedRipple="true"
                 android:textAlignment="center"
+                android:background="@drawable/bg_round_bottom"
+                android:backgroundTint="@color/colorPrimary"
+                app:tabMode="auto"
+                app:tabUnboundedRipple="true"
+                app:tabIndicator="@drawable/bg_round"
+                app:tabIndicatorHeight="48dp"
+                app:tabIndicatorColor="@color/colorAccent"
                 style="@style/Widget.MaterialComponents.TabLayout.Colored"/>
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -273,7 +289,7 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/pager_detail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -10,8 +10,15 @@
         app:showAsAction="collapseActionView|always"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
         tools:ignore="AlwaysShowAction" />
+
     <item
-        android:id="@+id/action_change_language"
-        android:title="@string/change_language"
+        android:id="@+id/action_favorite"
+        android:title="@string/favorite"
         app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/settings"
+        app:showAsAction="never"/>
+
 </menu>

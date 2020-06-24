@@ -1,12 +1,16 @@
 package com.example.githubuserapp.repository
 
+import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.githubuserapp.activity.MainActivity
 import com.example.githubuserapp.api.ApiService
+import com.example.githubuserapp.database.UserDatabase
 import com.example.githubuserapp.model.Repository
 import com.example.githubuserapp.model.User
 import com.example.githubuserapp.model.UserQuery
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -18,6 +22,8 @@ class UserRepository {
     private val repos = MutableLiveData<ArrayList<Repository>>()
     private val followers = MutableLiveData<ArrayList<User>>()
     private val following = MutableLiveData<ArrayList<User>>()
+    private val favorites = MutableLiveData<List<User>>()
+    private val favorite = MutableLiveData<User>()
 
     fun getMessage(): LiveData<String> = message
     fun getUsers(): LiveData<ArrayList<User>> = users
@@ -25,7 +31,8 @@ class UserRepository {
     fun getRepos(): LiveData<ArrayList<Repository>> = repos
     fun getFollowers(): LiveData<ArrayList<User>> = followers
     fun getFollowing(): LiveData<ArrayList<User>> = following
-
+    fun getFavorites(): LiveData<List<User>> = favorites
+    fun getFavorite(): LiveData<User> = favorite
 
     fun setUsers() {
         ApiService.invoke().getUsers(MainActivity.TOKEN).enqueue(object: Callback<ArrayList<User>> {
@@ -125,6 +132,50 @@ class UserRepository {
                 }
             }
         })
+    }
+
+    fun setFavorites(context: Context) {
+        GlobalScope.launch {
+            try {
+                favorites.postValue(UserDatabase.invoke(context).getUserDao().getUsers())
+            } catch (e: Exception) {
+                message.postValue(e.toString())
+            }
+        }
+    }
+
+    fun setFavorite(context: Context, id: Int) {
+        GlobalScope.launch {
+            try {
+                favorite.postValue(UserDatabase.invoke(context).getUserDao().getUserById(id))
+            } catch (e: Exception) {
+                message.postValue(e.toString())
+            }
+        }
+    }
+
+    fun insertFavorite(context: Context, user: User) {
+        GlobalScope.launch {
+            try {
+                UserDatabase.invoke(context).getUserDao().insertUser(user)
+            } catch (e: Exception) {
+                message.postValue(e.toString())
+            }
+        }
+    }
+
+    fun deleteFavorite(context: Context, user: User) {
+        GlobalScope.launch {
+            try {
+                UserDatabase.invoke(context).getUserDao().deleteUser(user)
+            } catch (e: Exception) {
+                message.postValue(e.toString())
+            }
+        }
+    }
+
+    fun clearMessage() {
+        message.postValue(null)
     }
 
 }

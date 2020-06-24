@@ -24,15 +24,17 @@ class ListReposAdapter(private var repos: ArrayList<Repository>)
         holder.bind(repos[position])
     }
 
-    @Suppress("USELESS_ELVIS")
+    @Suppress("SENSELESS_COMPARISON")
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(repos: Repository) {
             with(itemView) {
+
                 tv_item_repo_name.text = repos.name
                 tv_item_repo_description.text = repos.description
-                tv_item_repo_language.text = repos.language ?: "?"
+                tv_item_repo_language.text = repos.language
                 tv_item_repo_star.text = repos.stars.toString()
                 tv_item_repo_fork.text = repos.forks.toString()
+
             }
         }
     }

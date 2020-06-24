@@ -14,7 +14,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:maxLines="1"
         android:textColor="@color/colorAccent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,21 +39,24 @@
         android:layout_width="wrap_content"
         android:layout_height="14dp"
         android:layout_centerVertical="true"
-        android:layout_marginTop="16dp"
         android:contentDescription="@string/content_description_repo_language"
         android:src="@drawable/ic_round_1_gold_24dp"
-        app:layout_constraintStart_toStartOf="@+id/tv_item_repo_name"
-        app:layout_constraintTop_toBottomOf="@+id/tv_item_repo_description" />
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_item_repo_language"
+        app:layout_constraintEnd_toStartOf="@+id/tv_item_repo_language"
+        app:layout_constraintTop_toTopOf="@+id/tv_item_repo_language" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_item_repo_language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
         android:layout_toEndOf="@id/iv_item_repo_language"
         android:textColor="@color/colorSecondaryExtraDark"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_item_repo_language"
-        app:layout_constraintStart_toEndOf="@+id/iv_item_repo_language"
-        app:layout_constraintTop_toTopOf="@+id/iv_item_repo_language"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_item_repo_star"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_item_repo_star"
         tools:text="@string/java" />
 
     <ImageView
@@ -62,11 +65,14 @@
         android:layout_height="16dp"
         android:layout_centerVertical="true"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:layout_toEndOf="@id/tv_item_repo_language"
         android:contentDescription="@string/content_description_repo_star"
         android:src="@drawable/ic_star_black_24dp"
-        app:layout_constraintStart_toEndOf="@+id/tv_item_repo_language"
-        app:layout_constraintTop_toTopOf="@+id/iv_item_repo_language" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_repo_description" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_item_repo_star"
@@ -74,9 +80,9 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/iv_item_repo_star"
         android:textColor="@color/colorSecondaryExtraDark"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_item_repo_language"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_item_repo_star"
         app:layout_constraintStart_toEndOf="@+id/iv_item_repo_star"
-        app:layout_constraintTop_toTopOf="@+id/iv_item_repo_language"
+        app:layout_constraintTop_toTopOf="@+id/iv_item_repo_star"
         tools:text="@string/star_number" />
 
     <ImageView
@@ -89,30 +95,21 @@
         android:contentDescription="@string/content_description_repo_star"
         android:src="@drawable/ic_fork"
         android:tint="@color/colorSecondaryExtraDark"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_item_repo_star"
         app:layout_constraintStart_toEndOf="@+id/tv_item_repo_star"
-        app:layout_constraintTop_toTopOf="@+id/iv_item_repo_language" />
+        app:layout_constraintTop_toTopOf="@+id/iv_item_repo_star" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_item_repo_fork"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
         android:layout_toEndOf="@id/iv_item_repo_fork"
         android:textColor="@color/colorSecondaryExtraDark"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_item_repo_language"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_item_repo_fork"
         app:layout_constraintStart_toEndOf="@+id/iv_item_repo_fork"
-        app:layout_constraintTop_toTopOf="@+id/iv_item_repo_language"
+        app:layout_constraintTop_toTopOf="@+id/iv_item_repo_fork"
         tools:text="@string/fork_number" />
 
-
-    <View
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/colorSecondaryDark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tv_item_repo_name"
-        app:layout_constraintTop_toBottomOf="@+id/tv_item_repo_language" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

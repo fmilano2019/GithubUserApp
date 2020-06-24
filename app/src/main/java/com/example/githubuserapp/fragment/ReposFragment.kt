@@ -42,18 +42,22 @@ class ReposFragment : Fragment() {
             adapter.addRepos(it)
         })
         detailViewModel.getMessage().observe(viewLifecycleOwner, Observer {
-            pb_repos.visibility = View.GONE
+            if (it != null) {
+                pb_repos.visibility = View.GONE
+            }
         })
+        detailViewModel.clearMessage()
     }
 
     private fun setupViewModel() {
-        detailViewModel = activity?.let { ViewModelProvider(it, ViewModelProvider.NewInstanceFactory()).get(DetailViewModel::class.java) }!!
+        detailViewModel = ViewModelProvider(requireActivity(), ViewModelProvider.NewInstanceFactory()).get(DetailViewModel::class.java)
     }
 
     private fun setupUI() {
-        adapter = ListReposAdapter(arrayListOf())
+        pb_repos.visibility = View.VISIBLE
         rv_repos.setHasFixedSize(true)
-        rv_repos.layoutManager = LinearLayoutManager(this.context)
+        rv_repos.layoutManager = LinearLayoutManager(context)
+        adapter = ListReposAdapter(arrayListOf())
         rv_repos.adapter = adapter
     }
 

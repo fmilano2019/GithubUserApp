@@ -1,16 +1,23 @@
 package com.example.githubuserapp.model
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity
 data class User(
     @SerializedName("id")
-    var id: Int?,
+    @PrimaryKey(autoGenerate = true)
+    var id: Int,
 
     @SerializedName("login")
-    var username: String?,
+    @ColumnInfo(name = "username")
+    var username: String,
 
     @SerializedName("avatar_url")
-    var avatarUrl: String?,
+    @ColumnInfo(name = "avatarUrl")
+    var avatarUrl: String,
 
     @SerializedName("name")
     var name: String?,
