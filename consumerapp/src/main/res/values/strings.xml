@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Consumer App</string>
+    <string name="content_description_user">Content Description User</string>
+    <!--suppress AndroidDomInspection -->
+    <string name="tag_id">#</string>
+    <string name="toolbar_title">Users</string>
+</resources>

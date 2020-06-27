@@ -1,0 +1,217 @@
+-- Merging decision tree log ---
+manifest
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
+MERGED from [androidx.core:core-ktx:1.3.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\1fb02f1caad7485e3374cb20b3414750\jetified-core-ktx-1.3.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\245eeba801ffe20aa3d6dcc813cd56aa\material-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\37f8c4dd40cae9c335785b1e6a0e88cd\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\cd7593004dafd610de9f86ca88185a2a\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\3f63eafe4376c05b371d776825dc11b9\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\99982336b43acf6361002a483a5e5765\jetified-glide-4.11.0\AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\2f90313392d1419250703c38c9ccf6aa\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\ac06e3be626ac6f177c83aa3c2ad0ed8\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\600370049f293c4623b3f3feb0ffb37f\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\df23371915922d127013655201aaad25\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\bba32d6de9a3638181cf13a55deaa091\fragment-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\39d893ee71d090a56f402a8bdac8c4a3\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\9538f3f1fa0cfcf296a4652e33d802be\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\c016116914c2cc96fca7f212147f90c7\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\806cd4b67264b44b11d4b92e828efd8d\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\84f29f6a0e2494d6bc34180d14d0469e\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\a246ee18fba8dceab827a6ac278c4cd3\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\b9555fda5039e8d9f34d38595d389d60\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\d02c1dd1b5420f0f04cccec08ca490f7\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\1f25c003df0eea10c87a8ff8e9921dd9\jetified-activity-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.3.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\2f305c0ed3056ca895a216f9db1fc5d1\core-1.3.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\f71d7dc39191d021f1770b7d2176cfcb\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\21181b20135799ce5b0e8d627b778fae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:17:1-32:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\5e08beb60b75792d3d4bdb26bc0b4f48\jetified-lifecycle-service-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\321f56884c311c286a7686d7e6415a5e\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\258cf73284cd72863fc38b7e3e9298f5\lifecycle-livedata-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\49cd5ab38391870956e84b66a95a44bb\jetified-lifecycle-viewmodel-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\ffd84f501f0c408a21521fe5b48d4754\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\a0f744b342950a53def520cb20d74b60\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\ffd8d829282f8628ff5aab005decb26d\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\5075ae16918aaae59289d01d8fbb88f9\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\4149538b20dece1ad6926e42ac95e620\jetified-gifdecoder-4.11.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\72eda12ef84c81770126069755835daf\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\071c7be180247297141de3e5a2aa234c\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\7f024e59f3910c53d9bf63c6f976ce5a\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\9c6aaa4abfd143056d89ebb2be28e969\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
+	package
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:4:5-38
+		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
+		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
+		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:11-69
+permission#com.example.githubuserapp.READ_DATABASE
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:6:5-106
+	android:protectionLevel
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:6:72-104
+	android:name
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:6:17-71
+permission#com.example.githubuserapp.WRITE_DATABASE
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:7:5-107
+	android:protectionLevel
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:7:73-105
+	android:name
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:7:17-72
+application
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:9:5-24:19
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\245eeba801ffe20aa3d6dcc813cd56aa\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\245eeba801ffe20aa3d6dcc813cd56aa\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\cd7593004dafd610de9f86ca88185a2a\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\cd7593004dafd610de9f86ca88185a2a\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\3f63eafe4376c05b371d776825dc11b9\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\3f63eafe4376c05b371d776825dc11b9\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\99982336b43acf6361002a483a5e5765\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\99982336b43acf6361002a483a5e5765\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
+MERGED from [androidx.core:core:1.3.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\2f305c0ed3056ca895a216f9db1fc5d1\core-1.3.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\2f305c0ed3056ca895a216f9db1fc5d1\core-1.3.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\21181b20135799ce5b0e8d627b778fae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\21181b20135799ce5b0e8d627b778fae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\4149538b20dece1ad6926e42ac95e620\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\4149538b20dece1ad6926e42ac95e620\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\9c6aaa4abfd143056d89ebb2be28e969\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\9c6aaa4abfd143056d89ebb2be28e969\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.3.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\2f305c0ed3056ca895a216f9db1fc5d1\core-1.3.0\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:12:9-41
+	tools:ignore
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:16:9-35
+	android:roundIcon
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:13:9-54
+	android:icon
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:11:9-43
+	android:allowBackup
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:10:9-35
+	android:theme
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:15:9-40
+activity#com.example.consumerapp.MainActivity
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:17:9-23:20
+	android:name
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:17:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:18:13-22:29
+action#android.intent.action.MAIN
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:19:17-69
+	android:name
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:19:25-66
+category#android.intent.category.LAUNCHER
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:21:27-74
+uses-sdk
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+MERGED from [androidx.core:core-ktx:1.3.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\1fb02f1caad7485e3374cb20b3414750\jetified-core-ktx-1.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.3.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\1fb02f1caad7485e3374cb20b3414750\jetified-core-ktx-1.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\245eeba801ffe20aa3d6dcc813cd56aa\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\245eeba801ffe20aa3d6dcc813cd56aa\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\37f8c4dd40cae9c335785b1e6a0e88cd\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\37f8c4dd40cae9c335785b1e6a0e88cd\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\cd7593004dafd610de9f86ca88185a2a\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\cd7593004dafd610de9f86ca88185a2a\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\3f63eafe4376c05b371d776825dc11b9\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\3f63eafe4376c05b371d776825dc11b9\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\99982336b43acf6361002a483a5e5765\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\99982336b43acf6361002a483a5e5765\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\2f90313392d1419250703c38c9ccf6aa\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\2f90313392d1419250703c38c9ccf6aa\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\ac06e3be626ac6f177c83aa3c2ad0ed8\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\ac06e3be626ac6f177c83aa3c2ad0ed8\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\600370049f293c4623b3f3feb0ffb37f\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\600370049f293c4623b3f3feb0ffb37f\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\df23371915922d127013655201aaad25\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\df23371915922d127013655201aaad25\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\bba32d6de9a3638181cf13a55deaa091\fragment-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\bba32d6de9a3638181cf13a55deaa091\fragment-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\39d893ee71d090a56f402a8bdac8c4a3\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\39d893ee71d090a56f402a8bdac8c4a3\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\9538f3f1fa0cfcf296a4652e33d802be\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\9538f3f1fa0cfcf296a4652e33d802be\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\c016116914c2cc96fca7f212147f90c7\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\c016116914c2cc96fca7f212147f90c7\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\806cd4b67264b44b11d4b92e828efd8d\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\806cd4b67264b44b11d4b92e828efd8d\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\84f29f6a0e2494d6bc34180d14d0469e\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\84f29f6a0e2494d6bc34180d14d0469e\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\a246ee18fba8dceab827a6ac278c4cd3\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\a246ee18fba8dceab827a6ac278c4cd3\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\b9555fda5039e8d9f34d38595d389d60\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\b9555fda5039e8d9f34d38595d389d60\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\d02c1dd1b5420f0f04cccec08ca490f7\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\d02c1dd1b5420f0f04cccec08ca490f7\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\1f25c003df0eea10c87a8ff8e9921dd9\jetified-activity-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\1f25c003df0eea10c87a8ff8e9921dd9\jetified-activity-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\2f305c0ed3056ca895a216f9db1fc5d1\core-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\2f305c0ed3056ca895a216f9db1fc5d1\core-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\f71d7dc39191d021f1770b7d2176cfcb\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\f71d7dc39191d021f1770b7d2176cfcb\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\21181b20135799ce5b0e8d627b778fae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\21181b20135799ce5b0e8d627b778fae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\5e08beb60b75792d3d4bdb26bc0b4f48\jetified-lifecycle-service-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\5e08beb60b75792d3d4bdb26bc0b4f48\jetified-lifecycle-service-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\321f56884c311c286a7686d7e6415a5e\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\321f56884c311c286a7686d7e6415a5e\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\258cf73284cd72863fc38b7e3e9298f5\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\258cf73284cd72863fc38b7e3e9298f5\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\49cd5ab38391870956e84b66a95a44bb\jetified-lifecycle-viewmodel-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\49cd5ab38391870956e84b66a95a44bb\jetified-lifecycle-viewmodel-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\ffd84f501f0c408a21521fe5b48d4754\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\ffd84f501f0c408a21521fe5b48d4754\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\a0f744b342950a53def520cb20d74b60\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\a0f744b342950a53def520cb20d74b60\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\ffd8d829282f8628ff5aab005decb26d\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\ffd8d829282f8628ff5aab005decb26d\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\5075ae16918aaae59289d01d8fbb88f9\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\5075ae16918aaae59289d01d8fbb88f9\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\4149538b20dece1ad6926e42ac95e620\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\4149538b20dece1ad6926e42ac95e620\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\72eda12ef84c81770126069755835daf\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\72eda12ef84c81770126069755835daf\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\071c7be180247297141de3e5a2aa234c\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\071c7be180247297141de3e5a2aa234c\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\7f024e59f3910c53d9bf63c6f976ce5a\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\7f024e59f3910c53d9bf63c6f976ce5a\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\9c6aaa4abfd143056d89ebb2be28e969\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\9c6aaa4abfd143056d89ebb2be28e969\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
+provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\21181b20135799ce5b0e8d627b778fae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\21181b20135799ce5b0e8d627b778fae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+	android:multiprocess
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\21181b20135799ce5b0e8d627b778fae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\21181b20135799ce5b0e8d627b778fae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\21181b20135799ce5b0e8d627b778fae\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79

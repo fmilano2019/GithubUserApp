@@ -28,6 +28,5 @@
     <string name="language_preference_title">Ubah bahasa</string>
     <string name="reminder_time_title">Waktu Pengingat</string>
     <string name="favorite">Favorit</string>
-    <string name="empty">Kosong</string>
     <string name="content_description_delete">content_description_delete</string>
 </resources>

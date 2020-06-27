@@ -28,6 +28,5 @@
     <string name="language_preference_title">Change language</string>
     <string name="reminder_time_title">Set Reminder Time</string>
     <string name="favorite">Favorite</string>
-    <string name="empty">Empty</string>
     <string name="content_description_delete">content_description_delete</string>
 </resources>
