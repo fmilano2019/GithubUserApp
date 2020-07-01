@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-27:12
 MERGED from [androidx.core:core-ktx:1.3.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\1fb02f1caad7485e3374cb20b3414750\jetified-core-ktx-1.3.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\245eeba801ffe20aa3d6dcc813cd56aa\material-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\37f8c4dd40cae9c335785b1e6a0e88cd\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -40,39 +40,39 @@ MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Fikri Milano\.
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\071c7be180247297141de3e5a2aa234c\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\7f024e59f3910c53d9bf63c6f976ce5a\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\9c6aaa4abfd143056d89ebb2be28e969\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
-INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-27:12
 	package
 		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:4:5-38
 		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
 		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-27:12
 		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-26:12
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:1-27:12
 		INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:2:11-69
-permission#com.example.githubuserapp.READ_DATABASE
-ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:6:5-106
-	android:protectionLevel
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:6:72-104
+uses-permission#android.permission.INTERNET
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:6:5-67
 	android:name
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:6:17-71
-permission#com.example.githubuserapp.WRITE_DATABASE
-ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:7:5-107
-	android:protectionLevel
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:7:73-105
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:6:22-64
+uses-permission#com.example.githubuserapp.READ_DATABASE
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:7:5-78
 	android:name
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:7:17-72
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:7:22-76
+uses-permission#com.example.githubuserapp.WRITE_DATABASE
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:8:22-77
 application
-ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:9:5-24:19
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:10:5-25:19
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\245eeba801ffe20aa3d6dcc813cd56aa\material-1.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\245eeba801ffe20aa3d6dcc813cd56aa\material-1.1.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\cd7593004dafd610de9f86ca88185a2a\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
@@ -92,33 +92,33 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Fi
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.0] C:\Users\Fikri Milano\.gradle\caches\transforms-2\files-2.1\2f305c0ed3056ca895a216f9db1fc5d1\core-1.3.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:14:9-35
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:12:9-41
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:13:9-41
 	tools:ignore
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:16:9-35
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:17:9-35
 	android:roundIcon
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:13:9-54
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:14:9-54
 	android:icon
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:11:9-43
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:10:9-35
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:15:9-40
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:16:9-40
 activity#com.example.consumerapp.MainActivity
-ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:17:9-23:20
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:18:9-24:20
 	android:name
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:17:19-47
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:18:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:18:13-22:29
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:19:17-69
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:19:25-66
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:21:17-77
+ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:22:17-77
 	android:name
-		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:21:27-74
+		ADDED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:22:27-74
 uses-sdk
 INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml

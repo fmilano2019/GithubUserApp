@@ -62,15 +62,15 @@ dependencies {
     // UI
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     implementation 'com.google.android.material:material:1.1.0'
-    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 
     // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     //Navigation
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0-rc01'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.0-rc01'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
 
     //Preference
     implementation 'androidx.preference:preference:1.1.1'

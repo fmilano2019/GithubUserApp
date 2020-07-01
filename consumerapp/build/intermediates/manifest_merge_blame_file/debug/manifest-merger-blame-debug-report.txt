@@ -21,7 +21,7 @@
 13-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:8:22-77
 14
 15    <application
-15-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:10:5-24:19
+15-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:10:5-25:19
 16        android:allowBackup="true"
 16-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:11:9-35
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -39,17 +39,17 @@
 24        android:theme="@style/AppTheme" >
 24-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:16:9-40
 25        <activity android:name="com.example.consumerapp.MainActivity" >
-25-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:17:9-23:20
-25-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:17:19-47
+25-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:18:9-24:20
+25-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:18:19-47
 26            <intent-filter>
-26-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:18:13-22:29
+26-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:19:13-23:29
 27                <action android:name="android.intent.action.MAIN" />
-27-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:19:17-69
-27-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:19:25-66
+27-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:20:17-69
+27-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:20:25-66
 28
 29                <category android:name="android.intent.category.LAUNCHER" />
-29-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:21:17-77
-29-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:21:27-74
+29-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:22:17-77
+29-->G:\Android Project\10. Dicoding Fundamental Submission 2\consumerapp\src\main\AndroidManifest.xml:22:27-74
 30            </intent-filter>
 31        </activity>
 32

@@ -1,19 +1,27 @@
 package com.example.githubuserapp.repository
 
+import android.appwidget.AppWidgetManager
+import android.content.ComponentName
 import android.content.Context
+import android.net.Uri
+import androidx.core.content.contentValuesOf
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.example.githubuserapp.R
 import com.example.githubuserapp.activity.MainActivity
 import com.example.githubuserapp.api.ApiService
 import com.example.githubuserapp.database.UserDatabase
 import com.example.githubuserapp.model.Repository
 import com.example.githubuserapp.model.User
 import com.example.githubuserapp.model.UserQuery
+import com.example.githubuserapp.utils.MappingHelper
+import com.example.githubuserapp.widget.FavoriteUserWidget
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class UserRepository {
     private val message = MutableLiveData<String>()
@@ -137,7 +145,8 @@ class UserRepository {
     fun setFavorites(context: Context) {
         GlobalScope.launch {
             try {
-                favorites.postValue(UserDatabase.invoke(context).getUserDao().getUsers())
+                val cursor = context.contentResolver.query(MainActivity.URI_FAVORITE, null, null, null, null, null)
+                favorites.postValue(MappingHelper.cursorToArrayList(cursor))
             } catch (e: Exception) {
                 message.postValue(e.toString())
             }
@@ -157,7 +166,14 @@ class UserRepository {
     fun insertFavorite(context: Context, user: User) {
         GlobalScope.launch {
             try {
-                UserDatabase.invoke(context).getUserDao().insertUser(user)
+                val values = contentValuesOf(
+                    "id" to user.id,
+                    "username" to user.username,
+                    "avatarUrl" to user.avatarUrl
+                )
+                context.contentResolver.insert(MainActivity.URI_FAVORITE, values)
+                widgetUpdate(context)
+
             } catch (e: Exception) {
                 message.postValue(e.toString())
             }
@@ -167,11 +183,21 @@ class UserRepository {
     fun deleteFavorite(context: Context, user: User) {
         GlobalScope.launch {
             try {
-                UserDatabase.invoke(context).getUserDao().deleteUser(user)
+                val uriWithId = Uri.parse("${MainActivity.URI_FAVORITE}/${user.id}")
+                context.contentResolver.delete(uriWithId, null, null)
+                widgetUpdate(context)
+
             } catch (e: Exception) {
                 message.postValue(e.toString())
             }
         }
+    }
+
+    private fun widgetUpdate(context: Context) {
+        val appWidgetManager = AppWidgetManager.getInstance(context)
+        val thisWidget = ComponentName(context, FavoriteUserWidget::class.java)
+        val appWidgetIds = appWidgetManager.getAppWidgetIds(thisWidget)
+        appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.sv_widget_favorite)
     }
 
     fun clearMessage() {

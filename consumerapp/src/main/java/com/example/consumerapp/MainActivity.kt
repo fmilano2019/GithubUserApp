@@ -2,6 +2,7 @@ package com.example.consumerapp
 
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -36,6 +37,11 @@ class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
         usersViewModel.setData(this)
         usersViewModel.getData().observe(this, Observer {
             adapter.addUsers(it)
+            if(it.isEmpty()) {
+                tv_favorite_empty.visibility = View.VISIBLE
+            } else {
+                tv_favorite_empty.visibility = View.GONE
+            }
         })
     }
 

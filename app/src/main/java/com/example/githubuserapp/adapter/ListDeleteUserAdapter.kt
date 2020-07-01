@@ -39,7 +39,7 @@ class ListDeleteUserAdapter(private var users: ArrayList<User>,
                     deleteClickListener(user)
                     deleteUser(position)
                 }
-                setOnClickListener { clickListener(user) }
+                setOnClickListener { clickListener.invoke(user) }
                 Glide.with(context)
                     .load(user.avatarUrl)
                     .into(iv_item_delete_avatar)
@@ -56,6 +56,7 @@ class ListDeleteUserAdapter(private var users: ArrayList<User>,
     fun deleteUser(position: Int) {
         users.removeAt(position)
         notifyItemRemoved(position)
+        notifyDataSetChanged()
     }
 
 }

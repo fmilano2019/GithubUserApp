@@ -10,13 +10,25 @@
         tools:layout="@layout/fragment_users">
         <action
             android:id="@+id/action_usersFragment_to_detailActivity"
-            app:destination="@id/detailActivity" />
+            app:destination="@id/detailActivity"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
         <action
             android:id="@+id/action_usersFragment_to_settingsActivity"
-            app:destination="@id/settingsActivity" />
+            app:destination="@id/settingsActivity"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
         <action
             android:id="@+id/action_usersFragment_to_favoriteFragment"
-            app:destination="@id/favoriteFragment" />
+            app:destination="@id/favoriteFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
     <activity
         android:id="@+id/detailActivity"
@@ -40,7 +52,7 @@
         android:id="@+id/settingsActivity"
         android:name="com.example.githubuserapp.activity.SettingsActivity"
         android:label="activity_settings"
-        tools:layout="@layout/activity_settings" />
+        tools:layout="@layout/activity_settings"/>
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.example.githubuserapp.fragment.FavoriteFragment"
@@ -48,6 +60,10 @@
         tools:layout="@layout/fragment_favorite" >
         <action
             android:id="@+id/action_favoriteFragment_to_detailActivity"
-            app:destination="@id/detailActivity" />
+            app:destination="@id/detailActivity"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
 </navigation>

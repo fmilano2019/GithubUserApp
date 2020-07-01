@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.githubuserapp.R
 import com.example.githubuserapp.adapter.ListDeleteUserAdapter
 import com.example.githubuserapp.model.User
@@ -16,7 +17,7 @@ import com.example.githubuserapp.utils.SnackbarUtils
 import com.example.githubuserapp.viewmodel.DetailViewModel
 import kotlinx.android.synthetic.main.fragment_favorite.*
 
-class FavoriteFragment : Fragment(), View.OnClickListener {
+class FavoriteFragment : Fragment(), View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
 
     private lateinit var detailViewModel: DetailViewModel
     private lateinit var adapter: ListDeleteUserAdapter
@@ -34,13 +35,17 @@ class FavoriteFragment : Fragment(), View.OnClickListener {
         setupViewModel()
         setupUI()
         setupObserver()
-
     }
 
     private fun setupObserver() {
         detailViewModel.setFavorites(requireContext())
         detailViewModel.getFavorites().observe(viewLifecycleOwner, Observer{
             adapter.addUsers(it as ArrayList<User>)
+            if (it.isEmpty()) {
+                tv_favorite_empty.visibility = View.VISIBLE
+            } else {
+                tv_favorite_empty.visibility = View.GONE
+            }
         })
         detailViewModel.getMessage().observe(viewLifecycleOwner, Observer {
             SnackbarUtils().errorSnackbar(requireContext(), coordinatorLayout, it)
@@ -50,6 +55,7 @@ class FavoriteFragment : Fragment(), View.OnClickListener {
     private fun setupUI() {
         val detail: (User) -> Unit = { toDetailFragment(it) }
         val delete: (User) -> Unit = { deleteUser(it) }
+        srl_favorite.setOnRefreshListener(this)
         mt_favorite.setNavigationOnClickListener(this)
         rv_favorite.setHasFixedSize(true)
         rv_favorite.layoutManager = LinearLayoutManager(context)
@@ -72,8 +78,15 @@ class FavoriteFragment : Fragment(), View.OnClickListener {
         actionToDetail.avatarUrl = user.avatarUrl
         view?.findNavController()?.navigate(actionToDetail)
     }
+
     private fun deleteUser(user: User) {
         detailViewModel.deleteFavorite(requireContext(), user)
+    }
+
+    override fun onRefresh() {
+        detailViewModel.setFavorites(requireContext()).run {
+            srl_favorite.isRefreshing = false
+        }
     }
 
 }

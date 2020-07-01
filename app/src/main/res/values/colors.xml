@@ -8,4 +8,5 @@
     <color name="colorSecondaryMediumDark">#F2F2F2</color>
     <color name="colorSecondaryDark">#E6E6E6</color>
     <color name="colorSecondaryExtraDark">#999999</color>
+    <color name="colorPrimaryWidget">#B224292E</color>
 </resources>

@@ -21,4 +21,9 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         onBackPressed()
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.from_left, R.anim.to_right)
+    }
 }

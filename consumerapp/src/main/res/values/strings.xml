@@ -3,5 +3,6 @@
     <string name="content_description_user">Content Description User</string>
     <!--suppress AndroidDomInspection -->
     <string name="tag_id">#</string>
-    <string name="toolbar_title">Users</string>
+    <string name="toolbar_title">Favorite</string>
+    <string name="favorite_users_is_empty">Favorite is empty</string>
 </resources>

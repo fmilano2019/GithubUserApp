@@ -18,6 +18,7 @@ import com.example.githubuserapp.viewmodel.DetailViewModel
 import com.google.android.material.button.MaterialButtonToggleGroup
 import kotlinx.android.synthetic.main.activity_detail.*
 
+
 class DetailActivity : AppCompatActivity(), View.OnClickListener,
     MaterialButtonToggleGroup.OnButtonCheckedListener {
 
@@ -157,6 +158,11 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener,
 
     override fun onClick(v: View?) {
         onBackPressed()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.from_left, R.anim.to_right)
     }
 
     override fun onButtonChecked(
