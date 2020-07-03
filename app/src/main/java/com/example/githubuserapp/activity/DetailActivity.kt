@@ -1,5 +1,6 @@
 package com.example.githubuserapp.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -37,7 +38,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener,
         setupUI()
         setupViewModel()
         isFavoriteCheck()
-        setupUserObserver()
+        loadData()
     }
 
     private fun isFavoriteCheck() {
@@ -75,12 +76,25 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener,
         }
     }
 
-    private fun setupUserObserver() {
-        val id = args.id
-        val username = args.username
-        val avatarUrl = args.avatarUrl
-        user = User(id, username, avatarUrl, null, null, null, null, null, null)
-        username.let {
+    private fun loadData() {
+        when(intent) {
+            null -> {
+                val id = args.id
+                val username = args.username
+                val avatarUrl = args.avatarUrl
+                user = User(id, username, avatarUrl, null, null, null, null, null, null)
+            }
+            else -> {
+                val id = intent.getIntExtra("id", 0)
+                intent.getStringExtra("username")?.let { username ->
+                    intent.getStringExtra("avatarUrl")?.let { avatarUrl ->
+                        user = User(id, username, avatarUrl, null, null, null, null, null, null)
+                    }
+                }
+            }
+        }
+
+        user.username.let {
             detailViewModel.setUser(it)
             detailViewModel.setRepos(it)
             detailViewModel.setFollowers(it)
@@ -162,6 +176,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener,
 
     override fun onBackPressed() {
         super.onBackPressed()
+        if(intent == null) startActivity(Intent(this, MainActivity::class.java))
         overridePendingTransition(R.anim.from_left, R.anim.to_right)
     }
 

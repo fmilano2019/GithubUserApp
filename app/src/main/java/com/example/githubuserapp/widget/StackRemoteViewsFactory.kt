@@ -1,6 +1,7 @@
 package com.example.githubuserapp.widget
 
 import android.content.Context
+import android.content.Intent
 import android.database.Cursor
 import android.graphics.Bitmap
 import android.os.Binder
@@ -8,6 +9,7 @@ import android.widget.RemoteViews
 import android.widget.RemoteViewsService
 import com.bumptech.glide.Glide
 import com.example.githubuserapp.R
+import com.example.githubuserapp.activity.DetailActivity
 import com.example.githubuserapp.activity.MainActivity
 import com.example.githubuserapp.model.User
 import com.example.githubuserapp.utils.MappingHelper
@@ -50,9 +52,17 @@ class StackRemoteViewsFactory(private val context: Context) : RemoteViewsService
 
     override fun getViewAt(position: Int): RemoteViews {
         val rv = RemoteViews(context.packageName, R.layout.item_favorite_widget)
+
         if (images.size >= 1) {
+            val intent = Intent(context, DetailActivity::class.java)
+                .putExtra("username", userItems[position].username)
+                .putExtra("id", userItems[position].id)
+                .putExtra("avatarUrl", userItems[position].avatarUrl)
+
             rv.setImageViewBitmap(R.id.iv_item_widget_favorite, images[position])
+            rv.setOnClickFillInIntent(R.id.iv_item_widget_favorite, intent)
         }
+
         return rv
     }
 

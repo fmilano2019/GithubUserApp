@@ -33,8 +33,10 @@
         </receiver>
 
         <activity android:name=".activity.SettingsActivity" />
-        <activity android:name=".activity.DetailActivity" />
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".activity.DetailActivity"
+            android:parentActivityName=".activity.MainActivity"/>
+        <activity android:name=".activity.MainActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
