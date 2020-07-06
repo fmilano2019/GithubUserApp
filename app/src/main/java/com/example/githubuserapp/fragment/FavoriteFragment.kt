@@ -39,7 +39,7 @@ class FavoriteFragment : Fragment(), View.OnClickListener, SwipeRefreshLayout.On
 
     private fun setupObserver() {
         detailViewModel.setFavorites(requireContext())
-        detailViewModel.getFavorites().observe(viewLifecycleOwner, Observer{
+        detailViewModel.getFavorites().observe(viewLifecycleOwner, Observer {
             adapter.addUsers(it as ArrayList<User>)
             if (it.isEmpty()) {
                 tv_favorite_empty.visibility = View.VISIBLE
@@ -64,7 +64,10 @@ class FavoriteFragment : Fragment(), View.OnClickListener, SwipeRefreshLayout.On
     }
 
     private fun setupViewModel() {
-        detailViewModel = ViewModelProvider(requireActivity(), ViewModelProvider.NewInstanceFactory()).get(DetailViewModel::class.java)
+        detailViewModel =
+            ViewModelProvider(requireActivity(), ViewModelProvider.NewInstanceFactory()).get(
+                DetailViewModel::class.java
+            )
     }
 
     override fun onClick(v: View?) {

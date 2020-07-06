@@ -50,7 +50,10 @@ class FollowingFragment : Fragment() {
     }
 
     private fun setupViewModel() {
-        detailViewModel = ViewModelProvider(requireActivity(), ViewModelProvider.NewInstanceFactory()).get(DetailViewModel::class.java)
+        detailViewModel =
+            ViewModelProvider(requireActivity(), ViewModelProvider.NewInstanceFactory()).get(
+                DetailViewModel::class.java
+            )
     }
 
     private fun setupUI() {

@@ -35,7 +35,7 @@ class SettingsFragment : PreferenceFragmentCompat(), Preference.OnPreferenceClic
     }
 
     private fun setReminderSwitch() {
-        when(sharedPreference.getBoolean("reminder_switch", false)) {
+        when (sharedPreference.getBoolean("reminder_switch", false)) {
             true -> reminderTimePreference?.isVisible = true
             false -> reminderTimePreference?.isVisible = false
         }
@@ -52,7 +52,7 @@ class SettingsFragment : PreferenceFragmentCompat(), Preference.OnPreferenceClic
     }
 
     override fun onPreferenceClick(preference: Preference?): Boolean {
-        when(preference?.key) {
+        when (preference?.key) {
             "reminder_time" -> {
                 hours = SharedPrefManager(requireContext()).getHour()
                 minutes = SharedPrefManager(requireContext()).getMinute()
@@ -91,9 +91,9 @@ class SettingsFragment : PreferenceFragmentCompat(), Preference.OnPreferenceClic
     }
 
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
-        when(key) {
+        when (key) {
             "reminder_switch" -> {
-                when(sharedPreferences?.getBoolean("reminder_switch", false)) {
+                when (sharedPreferences?.getBoolean("reminder_switch", false)) {
                     true -> {
                         reminderTimePreference?.isVisible = true
                         AlarmReceiver().setReminder(requireContext())

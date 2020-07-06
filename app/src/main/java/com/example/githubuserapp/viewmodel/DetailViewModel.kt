@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.example.githubuserapp.model.User
 import com.example.githubuserapp.repository.UserRepository
 
-class DetailViewModel :  ViewModel() {
+class DetailViewModel : ViewModel() {
     private val userRepository = UserRepository()
     private val message = userRepository.getMessage()
     private val user = userRepository.getUser()
@@ -49,8 +49,6 @@ class DetailViewModel :  ViewModel() {
 
     fun deleteFavorite(context: Context, user: User) = userRepository.deleteFavorite(context, user)
 
-    fun clearMessage() {
-        userRepository.clearMessage()
-    }
+    fun clearMessage() = userRepository.clearMessage()
 
 }

@@ -10,7 +10,7 @@ import com.example.githubuserapp.model.User
 @Dao
 interface UserDao {
     @Query("SELECT * FROM users")
-     fun getUsers(): List<User>
+    fun getUsers(): List<User>
 
     @Query("SELECT * FROM users")
     fun getUsersCursor(): Cursor

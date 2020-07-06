@@ -47,7 +47,10 @@ class UsersFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener,
     }
 
     private fun setupViewModel() {
-        mainViewModel = ViewModelProvider(requireActivity(), ViewModelProvider.NewInstanceFactory()).get(MainViewModel::class.java)
+        mainViewModel =
+            ViewModelProvider(requireActivity(), ViewModelProvider.NewInstanceFactory()).get(
+                MainViewModel::class.java
+            )
     }
 
     private fun setupUI() {
@@ -86,7 +89,7 @@ class UsersFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener,
     }
 
     private fun isLoading(state: Boolean) {
-        when(state) {
+        when (state) {
             true -> {
                 pb_main.visibility = View.VISIBLE
             }
@@ -132,7 +135,7 @@ class UsersFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener,
     override fun onQueryTextChange(newText: String?): Boolean = false
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
+        when (item.itemId) {
             R.id.action_settings -> {
                 toSettingsActivity()
             }

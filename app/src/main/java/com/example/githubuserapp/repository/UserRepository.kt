@@ -43,35 +43,40 @@ class UserRepository {
     fun getFavorite(): LiveData<User> = favorite
 
     fun setUsers() {
-        ApiService.invoke().getUsers(MainActivity.TOKEN).enqueue(object: Callback<ArrayList<User>> {
-            override fun onFailure(call: Call<ArrayList<User>>, t: Throwable) {
-                message.postValue(t.message)
-            }
-
-            override fun onResponse(call: Call<ArrayList<User>>, response: Response<ArrayList<User>>) {
-                if (response.isSuccessful) {
-                    users.postValue(response.body())
-                } else {
-                    message.postValue(response.errorBody()?.string())
+        ApiService.invoke().getUsers(MainActivity.TOKEN)
+            .enqueue(object : Callback<ArrayList<User>> {
+                override fun onFailure(call: Call<ArrayList<User>>, t: Throwable) {
+                    message.postValue(t.message)
                 }
-            }
-        })
+
+                override fun onResponse(
+                    call: Call<ArrayList<User>>,
+                    response: Response<ArrayList<User>>
+                ) {
+                    if (response.isSuccessful) {
+                        users.postValue(response.body())
+                    } else {
+                        message.postValue(response.errorBody()?.string())
+                    }
+                }
+            })
     }
 
     fun setQueryUsers(username: String?) {
-        ApiService.invoke().queryUser(MainActivity.TOKEN, username).enqueue(object: Callback<UserQuery> {
-            override fun onFailure(call: Call<UserQuery>, t: Throwable) {
-                message.postValue(t.message)
-            }
-
-            override fun onResponse(call: Call<UserQuery>, response: Response<UserQuery>) {
-                if (response.isSuccessful) {
-                    users.postValue(response.body()?.items)
-                } else {
-                    message.postValue(response.errorBody()?.string())
+        ApiService.invoke().queryUser(MainActivity.TOKEN, username)
+            .enqueue(object : Callback<UserQuery> {
+                override fun onFailure(call: Call<UserQuery>, t: Throwable) {
+                    message.postValue(t.message)
                 }
-            }
-        })
+
+                override fun onResponse(call: Call<UserQuery>, response: Response<UserQuery>) {
+                    if (response.isSuccessful) {
+                        users.postValue(response.body()?.items)
+                    } else {
+                        message.postValue(response.errorBody()?.string())
+                    }
+                }
+            })
     }
 
     fun setUser(username: String) {
@@ -91,61 +96,77 @@ class UserRepository {
     }
 
     fun setRepos(username: String) {
-        ApiService.invoke().getRepos(MainActivity.TOKEN, username).enqueue(object : Callback<ArrayList<Repository>> {
-            override fun onFailure(call: Call<ArrayList<Repository>>, t: Throwable) {
-                message.postValue(t.message)
-            }
-
-            override fun onResponse(
-                call: Call<ArrayList<Repository>>,
-                response: Response<ArrayList<Repository>>
-            ) {
-                if (response.isSuccessful) {
-                    repos.postValue(response.body())
-                } else {
-                    message.postValue(response.errorBody()?.string())
+        ApiService.invoke().getRepos(MainActivity.TOKEN, username)
+            .enqueue(object : Callback<ArrayList<Repository>> {
+                override fun onFailure(call: Call<ArrayList<Repository>>, t: Throwable) {
+                    message.postValue(t.message)
                 }
-            }
 
-        })
+                override fun onResponse(
+                    call: Call<ArrayList<Repository>>,
+                    response: Response<ArrayList<Repository>>
+                ) {
+                    if (response.isSuccessful) {
+                        repos.postValue(response.body())
+                    } else {
+                        message.postValue(response.errorBody()?.string())
+                    }
+                }
+
+            })
     }
 
     fun setFollowers(username: String) {
-        ApiService.invoke().getFollowers(MainActivity.TOKEN, username).enqueue(object: Callback<ArrayList<User>> {
-            override fun onFailure(call: Call<ArrayList<User>>, t: Throwable) {
-                message.postValue(t.message)
-            }
-
-            override fun onResponse(call: Call<ArrayList<User>>, response: Response<ArrayList<User>>) {
-                if (response.isSuccessful) {
-                    followers.postValue(response.body())
-                } else {
-                    message.postValue(response.errorBody()?.string())
+        ApiService.invoke().getFollowers(MainActivity.TOKEN, username)
+            .enqueue(object : Callback<ArrayList<User>> {
+                override fun onFailure(call: Call<ArrayList<User>>, t: Throwable) {
+                    message.postValue(t.message)
                 }
-            }
-        })
+
+                override fun onResponse(
+                    call: Call<ArrayList<User>>,
+                    response: Response<ArrayList<User>>
+                ) {
+                    if (response.isSuccessful) {
+                        followers.postValue(response.body())
+                    } else {
+                        message.postValue(response.errorBody()?.string())
+                    }
+                }
+            })
     }
 
     fun setFollowing(username: String) {
-        ApiService.invoke().getFollowing(MainActivity.TOKEN, username).enqueue(object: Callback<ArrayList<User>> {
-            override fun onFailure(call: Call<ArrayList<User>>, t: Throwable) {
-                message.postValue(t.message)
-            }
-
-            override fun onResponse(call: Call<ArrayList<User>>, response: Response<ArrayList<User>>) {
-                if (response.isSuccessful) {
-                    following.postValue(response.body())
-                } else {
-                    message.postValue(response.errorBody()?.string())
+        ApiService.invoke().getFollowing(MainActivity.TOKEN, username)
+            .enqueue(object : Callback<ArrayList<User>> {
+                override fun onFailure(call: Call<ArrayList<User>>, t: Throwable) {
+                    message.postValue(t.message)
                 }
-            }
-        })
+
+                override fun onResponse(
+                    call: Call<ArrayList<User>>,
+                    response: Response<ArrayList<User>>
+                ) {
+                    if (response.isSuccessful) {
+                        following.postValue(response.body())
+                    } else {
+                        message.postValue(response.errorBody()?.string())
+                    }
+                }
+            })
     }
 
     fun setFavorites(context: Context) {
         GlobalScope.launch {
             try {
-                val cursor = context.contentResolver.query(MainActivity.URI_FAVORITE, null, null, null, null, null)
+                val cursor = context.contentResolver.query(
+                    MainActivity.URI_FAVORITE,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                )
                 favorites.postValue(MappingHelper.cursorToArrayList(cursor))
             } catch (e: Exception) {
                 message.postValue(e.toString())

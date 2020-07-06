@@ -1,4 +1,4 @@
-#Wed Jul 01 10:30:28 ICT 2020
+#Mon Jul 06 19:57:21 ICT 2020
 base.0=G\:\\Android Project\\10. Dicoding Fundamental Submission 2\\consumerapp\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

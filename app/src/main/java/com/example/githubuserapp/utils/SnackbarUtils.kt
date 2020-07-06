@@ -11,7 +11,12 @@ class SnackbarUtils {
     fun errorSnackbar(context: Context, view: View, message: String?) {
         val snackbar = Snackbar.make(view, message.toString(), Snackbar.LENGTH_LONG)
         snackbar.animationMode = Snackbar.ANIMATION_MODE_SLIDE
-        snackbar.view.setBackgroundColor(ContextCompat.getColor(context, R.color.design_default_color_error))
+        snackbar.view.setBackgroundColor(
+            ContextCompat.getColor(
+                context,
+                R.color.design_default_color_error
+            )
+        )
         snackbar.show()
     }
 

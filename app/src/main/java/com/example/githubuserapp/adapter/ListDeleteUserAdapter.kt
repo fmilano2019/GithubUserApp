@@ -12,13 +12,18 @@ import kotlinx.android.synthetic.main.item_user.view.tv_item_delete_id
 import kotlinx.android.synthetic.main.item_user.view.tv_item_delete_username
 import kotlinx.android.synthetic.main.item_user_delete.view.*
 
-class ListDeleteUserAdapter(private var users: ArrayList<User>,
-                            private val clickListener: (User) -> Unit,
-                            private val deleteClickListener: (User) -> Unit
+class ListDeleteUserAdapter(
+    private var users: ArrayList<User>,
+    private val clickListener: (User) -> Unit,
+    private val deleteClickListener: (User) -> Unit
 ) : RecyclerView.Adapter<ListDeleteUserAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListDeleteUserAdapter.ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_user_delete, parent, false)
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ListDeleteUserAdapter.ViewHolder {
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_user_delete, parent, false)
         return ViewHolder(view)
     }
 
@@ -31,7 +36,12 @@ class ListDeleteUserAdapter(private var users: ArrayList<User>,
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(user: User, position: Int, clickListener: (User) -> Unit, deleteClickListener: (User) -> Unit) {
+        fun bind(
+            user: User,
+            position: Int,
+            clickListener: (User) -> Unit,
+            deleteClickListener: (User) -> Unit
+        ) {
             with(itemView) {
                 tv_item_delete_id.text = user.id.toString()
                 tv_item_delete_username.text = user.username

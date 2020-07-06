@@ -9,8 +9,10 @@ import com.example.githubuserapp.R
 import com.example.githubuserapp.model.User
 import kotlinx.android.synthetic.main.item_user.view.*
 
-class ListUserAdapter(private var users: ArrayList<User>, private val clickListener: (User) -> Unit)
-    : RecyclerView.Adapter<ListUserAdapter.ViewHolder>() {
+class ListUserAdapter(
+    private var users: ArrayList<User>,
+    private val clickListener: (User) -> Unit
+) : RecyclerView.Adapter<ListUserAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListUserAdapter.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_user, parent, false)

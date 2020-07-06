@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.githubuserapp.model.User
 
 @Database(entities = [User::class], version = 1)
-abstract class UserDatabase: RoomDatabase() {
+abstract class UserDatabase : RoomDatabase() {
 
     abstract fun getUserDao(): UserDao
 

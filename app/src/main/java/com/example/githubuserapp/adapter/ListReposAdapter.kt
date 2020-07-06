@@ -8,11 +8,12 @@ import com.example.githubuserapp.R
 import com.example.githubuserapp.model.Repository
 import kotlinx.android.synthetic.main.item_repository.view.*
 
-class ListReposAdapter(private var repos: ArrayList<Repository>)
-    : RecyclerView.Adapter<ListReposAdapter.ViewHolder>() {
+class ListReposAdapter(private var repos: ArrayList<Repository>) :
+    RecyclerView.Adapter<ListReposAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_repository, parent, false)
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_repository, parent, false)
         return ViewHolder(view)
     }
 
@@ -24,17 +25,14 @@ class ListReposAdapter(private var repos: ArrayList<Repository>)
         holder.bind(repos[position])
     }
 
-    @Suppress("SENSELESS_COMPARISON")
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(repos: Repository) {
             with(itemView) {
-
                 tv_item_repo_name.text = repos.name
                 tv_item_repo_description.text = repos.description
                 tv_item_repo_language.text = repos.language
                 tv_item_repo_star.text = repos.stars.toString()
                 tv_item_repo_fork.text = repos.forks.toString()
-
             }
         }
     }

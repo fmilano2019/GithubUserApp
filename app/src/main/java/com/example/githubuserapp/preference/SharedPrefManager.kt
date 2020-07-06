@@ -36,7 +36,8 @@ class SharedPrefManager(context: Context) {
 
     fun getHourAndMinute(): Date {
         val cal = Calendar.getInstance().apply {
-            set(0, 0, 0,
+            set(
+                0, 0, 0,
                 preferences.getInt(PREF_HOUR, 9),
                 preferences.getInt(PREF_MINUTE, 0)
             )

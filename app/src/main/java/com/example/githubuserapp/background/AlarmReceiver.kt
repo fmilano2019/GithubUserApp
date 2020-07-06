@@ -33,7 +33,8 @@ class AlarmReceiver : BroadcastReceiver() {
         val simpleDateFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
         val title = NOTIF_TITLE_ENGLISH
         val message = simpleDateFormat.format(SharedPrefManager(context).getHourAndMinute())
-        val notificationManagerCompat = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        val notificationManagerCompat =
+            context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         val mainIntent = Intent(context, MainActivity::class.java)
 
@@ -49,7 +50,7 @@ class AlarmReceiver : BroadcastReceiver() {
             .setSound(alarmSound)
             .setContentIntent(pendingIntent)
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 CHANNEL_ID,
                 CHANNEL_NAME,
@@ -118,11 +119,13 @@ class AlarmReceiver : BroadcastReceiver() {
             set(
                 Calendar.HOUR_OF_DAY, SharedPrefManager(
                     context
-                ).getHour())
+                ).getHour()
+            )
             set(
                 Calendar.MINUTE, SharedPrefManager(
                     context
-                ).getMinute())
+                ).getMinute()
+            )
         }
     }
 

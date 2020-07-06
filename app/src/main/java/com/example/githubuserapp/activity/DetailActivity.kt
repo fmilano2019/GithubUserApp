@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.navArgs
@@ -24,10 +25,10 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener,
     MaterialButtonToggleGroup.OnButtonCheckedListener {
 
     private lateinit var detailViewModel: DetailViewModel
-    private lateinit var  reposFragment: ReposFragment
-    private lateinit var  followersFragment: FollowersFragment
-    private lateinit var  followingFragment: FollowingFragment
-    private lateinit var  viewPagerAdapter: ViewPagerAdapter
+    private lateinit var reposFragment: ReposFragment
+    private lateinit var followersFragment: FollowersFragment
+    private lateinit var followingFragment: FollowingFragment
+    private lateinit var viewPagerAdapter: ViewPagerAdapter
     private lateinit var user: User
     private var isIdAvailable: Boolean? = null
     private val args: DetailActivityArgs by navArgs()
@@ -45,7 +46,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener,
         val id = args.id
         detailViewModel.setFavorite(this, id)
         detailViewModel.getFavorite().observe(this, Observer {
-            if(it != null) {
+            if (it != null) {
                 btn_detail_favorite.isChecked = true
                 isIdAvailable = true
             } else {
@@ -55,7 +56,10 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener,
     }
 
     private fun setupViewModel() {
-        detailViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(DetailViewModel::class.java)
+        detailViewModel = ViewModelProvider(
+            this,
+            ViewModelProvider.NewInstanceFactory()
+        ).get(DetailViewModel::class.java)
     }
 
     private fun setupUI() {
@@ -66,7 +70,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener,
     }
 
     private fun isLoading(state: Boolean) {
-        when(state) {
+        when (state) {
             true -> {
                 pb_detail.visibility = View.VISIBLE
             }
@@ -77,7 +81,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener,
     }
 
     private fun loadData() {
-        when(intent) {
+        when (intent) {
             null -> {
                 val id = args.id
                 val username = args.username
@@ -161,7 +165,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener,
             tv_detail_company.visibility = View.GONE
         }
 
-        if(!it.location.isNullOrEmpty()) {
+        if (!it.location.isNullOrEmpty()) {
             iv_detail_location.visibility = View.VISIBLE
             tv_detail_location.visibility = View.VISIBLE
         } else {
@@ -176,7 +180,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener,
 
     override fun onBackPressed() {
         super.onBackPressed()
-        if(intent == null) startActivity(Intent(this, MainActivity::class.java))
+        if (intent == null) startActivity(Intent(this, MainActivity::class.java))
         overridePendingTransition(R.anim.from_left, R.anim.to_right)
     }
 
@@ -185,21 +189,31 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener,
         checkedId: Int,
         isChecked: Boolean
     ) {
-        when(checkedId) {
+        when (checkedId) {
             R.id.btn_detail_favorite -> {
-                when(isChecked) {
+                when (isChecked) {
                     true -> {
                         if (isIdAvailable == false) {
                             detailViewModel.insertFavorite(this, user)
                         }
-                        btn_detail_favorite.setBackgroundColor(resources.getColor(R.color.colorAccent))
+                        btn_detail_favorite.setBackgroundColor(
+                            ContextCompat.getColor(
+                                this,
+                                R.color.colorAccent
+                            )
+                        )
                         btn_detail_favorite.text = resources.getString(R.string.favorited)
                     }
                     false -> {
                         if (isIdAvailable == true) {
                             detailViewModel.deleteFavorite(this, user)
                         }
-                        btn_detail_favorite.setBackgroundColor(resources.getColor(R.color.colorPrimaryLight))
+                        btn_detail_favorite.setBackgroundColor(
+                            ContextCompat.getColor(
+                                this,
+                                R.color.colorPrimaryLight
+                            )
+                        )
                         btn_detail_favorite.text = resources.getString(R.string.favorite)
                     }
                 }

@@ -25,9 +25,11 @@ class FavoriteContentProvider : ContentProvider() {
     }
 
     override fun insert(uri: Uri, values: ContentValues?): Uri? {
-        when(values) {
+        when (values) {
             null -> return null
-            else -> context?.let { UserDatabase.invoke(it).getUserDao().insertUser(fromContentValues(values)) }
+            else -> context?.let {
+                UserDatabase.invoke(it).getUserDao().insertUser(fromContentValues(values))
+            }
         }
         context?.contentResolver?.notifyChange(uri, null)
         return uri
@@ -43,7 +45,9 @@ class FavoriteContentProvider : ContentProvider() {
     }
 
     override fun delete(uri: Uri, selection: String?, selectionArgs: Array<out String>?): Int {
-        context?.let { UserDatabase.invoke(it).getUserDao().deleteUserById(ContentUris.parseId(uri)) }
+        context?.let {
+            UserDatabase.invoke(it).getUserDao().deleteUserById(ContentUris.parseId(uri))
+        }
         context?.contentResolver?.notifyChange(uri, null)
         return 0
     }

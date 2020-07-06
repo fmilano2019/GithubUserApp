@@ -1,4 +1,4 @@
-#Wed Jul 01 14:43:48 ICT 2020
+#Mon Jul 06 19:57:00 ICT 2020
 base.0=G\:\\Android Project\\10. Dicoding Fundamental Submission 2\\consumerapp\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

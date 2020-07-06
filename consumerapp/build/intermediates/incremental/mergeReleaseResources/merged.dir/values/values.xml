@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-    <attr name="appBarLayoutStyle"/>
+    <attr format="reference" name="appBarLayoutStyle"/>
     <attr format="reference" name="badgeStyle"/>
     <attr format="boolean" name="barrierAllowsGoneWidgets"/>
     <attr format="enum" name="barrierDirection">
@@ -18,6 +18,7 @@
     <attr format="reference" name="cardViewStyle"/>
     <attr format="boolean" name="chainUseRtl"/>
     <attr format="reference" name="checkedIcon"/>
+    <attr format="color" name="checkedIconTint"/>
     <attr format="reference" name="chipGroupStyle"/>
     <attr format="reference" name="chipStandaloneStyle"/>
     <attr format="reference" name="chipStyle"/>
@@ -44,8 +45,8 @@
         <enum name="invisible" value="1"/>
     </attr>
     <attr format="boolean" name="ensureMinTouchTargetSize"/>
-    <attr name="extendedFloatingActionButtonStyle"/>
-    <attr name="floatingActionButtonStyle"/>
+    <attr format="reference" name="extendedFloatingActionButtonStyle"/>
+    <attr format="reference" name="floatingActionButtonStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="reference" name="hideMotionSpec"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -179,14 +180,17 @@
     <attr format="dimension" name="minTouchTargetSize"/>
     <attr format="reference" name="navigationViewStyle"/>
     <attr format="reference" name="popupMenuBackground"/>
+    <attr format="reference" name="progressIndicatorStyle"/>
     <attr format="reference" name="recyclerViewStyle"/>
     <attr format="color" name="rippleColor"/>
     <attr format="color|reference" name="scrimBackground"/>
+    <attr format="boolean" name="selectionRequired"/>
     <attr format="reference" name="shapeAppearanceLargeComponent"/>
     <attr format="reference" name="shapeAppearanceMediumComponent"/>
     <attr format="reference" name="shapeAppearanceSmallComponent"/>
     <attr format="reference" name="showMotionSpec"/>
     <attr format="boolean" name="singleSelection"/>
+    <attr format="reference" name="sliderStyle"/>
     <attr format="color" name="strokeColor"/>
     <attr format="dimension" name="strokeWidth"/>
     <attr format="reference" name="tabStyle"/>
@@ -207,6 +211,9 @@
     <attr format="reference" name="textInputStyle"/>
     <attr format="dimension" name="themeLineHeight"/>
     <attr format="string" name="title"/>
+    <attr format="reference" name="tooltipStyle"/>
+    <attr format="color" name="trackColor"/>
+    <attr format="reference" name="transitionShapeAppearance"/>
     <attr format="boolean" name="useMaterialThemeColors"/>
     <bool name="abc_action_bar_embed_tabs">true</bool>
     <bool name="abc_allow_stacked_button_bar">false</bool>
@@ -248,7 +255,7 @@
     <color name="design_dark_default_color_on_primary">#000000</color>
     <color name="design_dark_default_color_on_secondary">#000000</color>
     <color name="design_dark_default_color_on_surface">#FFFFFF</color>
-    <color name="design_dark_default_color_primary">#BB86FC</color>
+    <color name="design_dark_default_color_primary">#BA86FC</color>
     <color name="design_dark_default_color_primary_dark">#000000</color>
     <color name="design_dark_default_color_primary_variant">#3700B3</color>
     <color name="design_dark_default_color_secondary">#03DAC6</color>
@@ -572,6 +579,7 @@
     <dimen name="mtrl_card_spacing">8dp</dimen>
     <dimen name="mtrl_chip_pressed_translation_z">3dp</dimen>
     <dimen name="mtrl_chip_text_size">14sp</dimen>
+    <dimen name="mtrl_edittext_rectangle_top_offset">12dp</dimen>
     <dimen name="mtrl_exposed_dropdown_menu_popup_elevation">8dp</dimen>
     <dimen name="mtrl_exposed_dropdown_menu_popup_vertical_offset">-8dp</dimen>
     <dimen name="mtrl_exposed_dropdown_menu_popup_vertical_padding">8dp</dimen>
@@ -612,9 +620,22 @@
     <dimen name="mtrl_navigation_item_icon_size">24dp</dimen>
     <dimen name="mtrl_navigation_item_shape_horizontal_margin">8dp</dimen>
     <dimen name="mtrl_navigation_item_shape_vertical_margin">4dp</dimen>
+    <dimen name="mtrl_progress_circular_inset">4dp</dimen>
+    <dimen name="mtrl_progress_circular_radius">18dp</dimen>
+    <dimen name="mtrl_progress_indicator_width">4dp</dimen>
     <dimen name="mtrl_shape_corner_size_large_component">0dp</dimen>
     <dimen name="mtrl_shape_corner_size_medium_component">4dp</dimen>
     <dimen name="mtrl_shape_corner_size_small_component">4dp</dimen>
+    <dimen name="mtrl_slider_halo_radius">24dp</dimen>
+    <dimen name="mtrl_slider_label_padding">4dp</dimen>
+    <dimen name="mtrl_slider_label_radius">13dp</dimen>
+    <dimen name="mtrl_slider_label_square_side">26dp</dimen>
+    <dimen name="mtrl_slider_thumb_elevation">1dp</dimen>
+    <dimen name="mtrl_slider_thumb_radius">10dp</dimen>
+    <dimen name="mtrl_slider_track_height">4dp</dimen>
+    <dimen name="mtrl_slider_track_side_padding">16dp</dimen>
+    <dimen name="mtrl_slider_track_top">24dp</dimen>
+    <dimen name="mtrl_slider_widget_height">48dp</dimen>
     <item format="float" name="mtrl_snackbar_action_text_color_alpha" type="dimen">0.5</item>
     <dimen name="mtrl_snackbar_background_corner_radius">4dp</dimen>
     <item format="float" name="mtrl_snackbar_background_overlay_color_alpha" type="dimen">0.8</item>
@@ -625,10 +646,17 @@
     <dimen name="mtrl_textinput_box_label_cutout_padding">4dp</dimen>
     <dimen name="mtrl_textinput_box_stroke_width_default">1dp</dimen>
     <dimen name="mtrl_textinput_box_stroke_width_focused">2dp</dimen>
+    <dimen name="mtrl_textinput_counter_margin_start">16dp</dimen>
     <dimen name="mtrl_textinput_end_icon_margin_start">4dp</dimen>
     <dimen name="mtrl_textinput_outline_box_expanded_padding">16dp</dimen>
     <dimen name="mtrl_textinput_start_icon_margin_end">4dp</dimen>
     <dimen name="mtrl_toolbar_default_height">56dp</dimen>
+    <dimen name="mtrl_tooltip_arrowSize">14dp</dimen>
+    <dimen name="mtrl_tooltip_cornerSize">4dp</dimen>
+    <dimen name="mtrl_tooltip_minHeight">32dp</dimen>
+    <dimen name="mtrl_tooltip_minWidth">32dp</dimen>
+    <dimen name="mtrl_tooltip_padding">12dp</dimen>
+    <dimen name="mtrl_transition_shared_axis_slide_distance">30dp</dimen>
     <dimen name="notification_action_icon_size">32dp</dimen>
     <dimen name="notification_action_text_size">13sp</dimen>
     <dimen name="notification_big_circle_margin">12dp</dimen>
@@ -703,9 +731,11 @@
     <item name="mtrl_card_checked_layer_id" type="id"/>
     <item name="mtrl_child_content_container" type="id"/>
     <item name="mtrl_internal_children_alpha_tag" type="id"/>
+    <item name="mtrl_motion_snapshot_view" type="id"/>
     <item name="parent_matrix" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
+    <item name="row_index_key" type="id"/>
     <item name="save_non_transition_alpha" type="id"/>
     <item name="save_overlay_view" type="id"/>
     <item name="snackbar_action" type="id"/>
@@ -724,6 +754,9 @@
     <item name="textinput_counter" type="id"/>
     <item name="textinput_error" type="id"/>
     <item name="textinput_helper_text" type="id"/>
+    <item name="textinput_placeholder" type="id"/>
+    <item name="textinput_prefix_text" type="id"/>
+    <item name="textinput_suffix_text" type="id"/>
     <item name="title" type="id"/>
     <item name="transition_current_scene" type="id"/>
     <item name="transition_layout_save" type="id"/>
@@ -790,7 +823,7 @@
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
-    <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
     <string name="chip_text">Chip text</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="content_description_user">Content Description User</string>
@@ -798,10 +831,13 @@
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
+    <string name="favorite_users_is_empty">Favorite is empty</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
+    <string name="item_view_role_description">Tab</string>
     <string description="Content description for new notification (no number count) [CHAR_LIMIT=NONE]" name="mtrl_badge_numberless_content_description">New notification</string>
     <string description="Content description for a close icon that lets the user remove content from the screen" name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
+    <string description="Plural form content description for when the number of new notifications exceeds a maximum count[CHAR_LIMIT=NONE]" name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">More than <ns1:g example="999" id="maximum number">%1$d</ns1:g> new notifications</string>
     <string name="mtrl_exceed_max_badge_number_suffix" translatable="false"><ns1:g example="999" id="maximum number">%1$d</ns1:g><ns1:g example="+" id="suffix">%2$s</ns1:g></string>
     <string description="a11y string to indicate this button moves the calendar to the next month [CHAR_LIMIT=NONE]" name="mtrl_picker_a11y_next_month">Change to next month</string>
     <string description="a11y string to indicate this button moves the calendar to the previous month [CHAR_LIMIT=NONE]" name="mtrl_picker_a11y_prev_month">Change to previous month</string>
@@ -827,13 +863,14 @@
     <string description="Label for a single date selected by the user [CHAR_LIMIT=60]" name="mtrl_picker_text_input_date_hint">Date</string>
     <string description="Label for the end date in a range selected by the user [CHAR_LIMIT=60]" name="mtrl_picker_text_input_date_range_end_hint">End date</string>
     <string description="Label for the start date in a range selected by the user [CHAR_LIMIT=60]" name="mtrl_picker_text_input_date_range_start_hint">Start date</string>
-    <string description="A 1 character abbreviation for day. It will be part of a string such as dd/mm/yyyy or mm/dd/yyyy or y.mm.dd. [CHAR_LIMIT=1]" name="mtrl_picker_text_input_day_abbr">d</string>
-    <string description="A 1 character abbreviation for month. It will be part of a string such as dd/mm/yyyy or mm/dd/yyyy or y.mm.dd. [CHAR_LIMIT=1]" name="mtrl_picker_text_input_month_abbr">m</string>
-    <string description="A 1 character abbreviation for year. It will be part of a string such as dd/mm/yyyy or mm/dd/yyyy or y.mm.dd. [CHAR_LIMIT=1]" name="mtrl_picker_text_input_year_abbr">y</string>
+    <string description="A 1 character abbreviation for day. It will be part of a string such as dd/mm/yyyy or mm/dd/yyyy or y.mm.dd. [CHAR_LIMIT=2]" name="mtrl_picker_text_input_day_abbr">d</string>
+    <string description="A 1 character abbreviation for month. It will be part of a string such as dd/mm/yyyy or mm/dd/yyyy or y.mm.dd. [CHAR_LIMIT=2]" name="mtrl_picker_text_input_month_abbr">m</string>
+    <string description="A 1 character abbreviation for year. It will be part of a string such as dd/mm/yyyy or mm/dd/yyyy or y.mm.dd. [CHAR_LIMIT=2]" name="mtrl_picker_text_input_year_abbr">y</string>
     <string description="a11y string to indicate this button changes the input mode to a calendar [CHAR_LIMIT=NONE]" name="mtrl_picker_toggle_to_calendar_input_mode">Switch to calendar input mode</string>
     <string description="a11y string to indicate this button switches the user to choosing a day [CHAR_LIMIT=NONE]" name="mtrl_picker_toggle_to_day_selection">Tap to switch to selecting a day</string>
     <string description="a11y string to indicate this button changes the input mode to a text field [CHAR_LIMIT=NONE]" name="mtrl_picker_toggle_to_text_input_mode">Switch to text input mode</string>
     <string description="a11y string to indicate this button switches the user to choosing a year [CHAR_LIMIT=NONE]" name="mtrl_picker_toggle_to_year_selection">Tap to switch to selecting a year</string>
+    <string description="Content description for the range of a slider, minimum to maximum. [CHAR_LIMIT=NONE]" name="mtrl_slider_range_content_description">%1$s to %2$s</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
@@ -845,6 +882,9 @@
     <string name="toolbar_title">Favorite</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
+    <style name="AndroidThemeColorAccentYellow" ns2:ignore="NewApi">
+    <item name="android:colorAccent">#FFFFFF00</item>
+  </style>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
     <style name="Animation.AppCompat.Tooltip" parent="Base.Animation.AppCompat.Tooltip"/>
@@ -1190,8 +1230,8 @@
   </style>
     <style name="Base.Theme.MaterialComponents.Dialog" parent="Base.V14.Theme.MaterialComponents.Dialog"/>
     <style name="Base.Theme.MaterialComponents.Dialog.Alert">
-    <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-    <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+    <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
   </style>
     <style name="Base.Theme.MaterialComponents.Dialog.Bridge" parent="Base.V14.Theme.MaterialComponents.Dialog.Bridge"/>
     <style name="Base.Theme.MaterialComponents.Dialog.FixedSize">
@@ -1201,8 +1241,8 @@
     <item name="windowFixedHeightMinor">@dimen/abc_dialog_fixed_height_minor</item>
   </style>
     <style name="Base.Theme.MaterialComponents.Dialog.MinWidth">
-    <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-    <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+    <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
   </style>
     <style name="Base.Theme.MaterialComponents.DialogWhenLarge" parent="Theme.MaterialComponents"/>
     <style name="Base.Theme.MaterialComponents.Light" parent="Base.V14.Theme.MaterialComponents.Light"/>
@@ -1220,8 +1260,8 @@
     <style name="Base.Theme.MaterialComponents.Light.DarkActionBar.Bridge" parent="Base.V14.Theme.MaterialComponents.Light.DarkActionBar.Bridge"/>
     <style name="Base.Theme.MaterialComponents.Light.Dialog" parent="Base.V14.Theme.MaterialComponents.Light.Dialog"/>
     <style name="Base.Theme.MaterialComponents.Light.Dialog.Alert">
-    <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-    <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+    <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
   </style>
     <style name="Base.Theme.MaterialComponents.Light.Dialog.Bridge" parent="Base.V14.Theme.MaterialComponents.Light.Dialog.Bridge"/>
     <style name="Base.Theme.MaterialComponents.Light.Dialog.FixedSize">
@@ -1231,8 +1271,8 @@
     <item name="windowFixedHeightMinor">@dimen/abc_dialog_fixed_height_minor</item>
   </style>
     <style name="Base.Theme.MaterialComponents.Light.Dialog.MinWidth">
-    <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-    <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+    <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
   </style>
     <style name="Base.Theme.MaterialComponents.Light.DialogWhenLarge" parent="Theme.MaterialComponents.Light"/>
     <style name="Base.ThemeOverlay.AppCompat" parent="Platform.ThemeOverlay.AppCompat"/>
@@ -1318,8 +1358,6 @@
     <item name="android:colorBackground">@color/design_dark_default_color_background</item>
     <item name="colorError">@color/design_dark_default_color_error</item>
 
-    <item name="minTouchTargetSize">@dimen/mtrl_min_touch_target_size</item>
-
     <!-- Action bar -->
     <item name="actionBarSize">@dimen/mtrl_toolbar_default_height</item>
     <item name="actionBarPopupTheme">@style/ThemeOverlay.MaterialComponents.Dark</item>
@@ -1331,30 +1369,15 @@
     <item name="android:contextPopupMenuStyle" ns2:targetApi="n">
       @style/Widget.MaterialComponents.PopupMenu.ContextMenu
     </item>
-    <item name="appBarLayoutStyle">@style/Widget.MaterialComponents.AppBarLayout.Surface</item>
-    <item name="badgeStyle">@style/Widget.MaterialComponents.Badge</item>
+    <item name="buttonBarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
+    <item name="android:buttonBarButtonStyle">?attr/buttonBarButtonStyle</item>
+
     <item name="borderlessButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
-    <item name="bottomAppBarStyle">@style/Widget.MaterialComponents.BottomAppBar</item>
-    <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView</item>
     <item name="checkboxStyle">@style/Widget.MaterialComponents.CompoundButton.CheckBox</item>
-    <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
-    <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
-    <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
-    <item name="extendedFloatingActionButtonStyle">@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon</item>
-    <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
     <item name="listPopupWindowStyle">@style/Widget.MaterialComponents.PopupMenu.ListPopupWindow</item>
-    <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
-    <item name="materialButtonOutlinedStyle">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
-    <item name="materialButtonToggleGroupStyle">@style/Widget.MaterialComponents.MaterialButtonToggleGroup</item>
-    <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
-    <item name="navigationViewStyle">@style/Widget.MaterialComponents.NavigationView</item>
     <item name="popupMenuStyle">@style/Widget.MaterialComponents.PopupMenu</item>
     <item name="radioButtonStyle">@style/Widget.MaterialComponents.CompoundButton.RadioButton</item>
-    <item name="snackbarStyle">@style/Widget.MaterialComponents.Snackbar</item>
-    <item name="snackbarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Snackbar</item>
     <item name="switchStyle">@style/Widget.MaterialComponents.CompoundButton.Switch</item>
-    <item name="tabStyle">@style/Widget.MaterialComponents.TabLayout</item>
-    <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox</item>
     <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar</item>
 
     <!-- Dialog themes -->
@@ -1390,6 +1413,30 @@
 
     <item name="scrimBackground">@color/mtrl_scrim_color</item>
     <item name="popupMenuBackground">@drawable/mtrl_popupmenu_background_dark</item>
+
+    <item name="minTouchTargetSize">@dimen/mtrl_min_touch_target_size</item>
+
+    <!-- Widget styles -->
+    <item name="appBarLayoutStyle">@style/Widget.MaterialComponents.AppBarLayout.Surface</item>
+    <item name="badgeStyle">@style/Widget.MaterialComponents.Badge</item>
+    <item name="bottomAppBarStyle">@style/Widget.MaterialComponents.BottomAppBar</item>
+    <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView</item>
+    <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
+    <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
+    <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
+    <item name="extendedFloatingActionButtonStyle">@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon</item>
+    <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
+    <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
+    <item name="materialButtonOutlinedStyle">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
+    <item name="materialButtonToggleGroupStyle">@style/Widget.MaterialComponents.MaterialButtonToggleGroup</item>
+    <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
+    <item name="navigationViewStyle">@style/Widget.MaterialComponents.NavigationView</item>
+    <item name="sliderStyle">@style/Widget.MaterialComponents.Slider</item>
+    <item name="snackbarStyle">@style/Widget.MaterialComponents.Snackbar</item>
+    <item name="snackbarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Snackbar</item>
+    <item name="snackbarTextViewStyle">@style/Widget.MaterialComponents.Snackbar.TextView</item>
+    <item name="tabStyle">@style/Widget.MaterialComponents.TabLayout</item>
+    <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox</item>
 
     <!-- Type styles -->
     <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialComponents.Headline1</item>
@@ -1432,8 +1479,6 @@
     <item name="android:colorBackground">@color/design_dark_default_color_background</item>
     <item name="colorError">@color/design_dark_default_color_error</item>
 
-    <item name="minTouchTargetSize">@dimen/mtrl_min_touch_target_size</item>
-
     <!-- Action bar -->
     <item name="actionBarSize">@dimen/mtrl_toolbar_default_height</item>
     <item name="actionBarPopupTheme">@style/ThemeOverlay.MaterialComponents.Dark</item>
@@ -1445,31 +1490,13 @@
     <item name="android:contextPopupMenuStyle" ns2:targetApi="n">
       @style/Widget.MaterialComponents.PopupMenu.ContextMenu
     </item>
-    <item name="appBarLayoutStyle">@style/Widget.MaterialComponents.AppBarLayout.Surface</item>
-    <item name="badgeStyle">@style/Widget.MaterialComponents.Badge</item>
     <item name="borderlessButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
-    <item name="bottomAppBarStyle">@style/Widget.MaterialComponents.BottomAppBar</item>
-    <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView</item>
     <item name="buttonBarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush</item>
     <item name="checkboxStyle">@style/Widget.MaterialComponents.CompoundButton.CheckBox</item>
-    <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
-    <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
-    <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
-    <item name="extendedFloatingActionButtonStyle">@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon</item>
-    <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
     <item name="listPopupWindowStyle">@style/Widget.MaterialComponents.PopupMenu.ListPopupWindow</item>
-    <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
-    <item name="materialButtonOutlinedStyle">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
-    <item name="materialButtonToggleGroupStyle">@style/Widget.MaterialComponents.MaterialButtonToggleGroup</item>
-    <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
-    <item name="navigationViewStyle">@style/Widget.MaterialComponents.NavigationView</item>
     <item name="popupMenuStyle">@style/Widget.MaterialComponents.PopupMenu</item>
     <item name="radioButtonStyle">@style/Widget.MaterialComponents.CompoundButton.RadioButton</item>
-    <item name="snackbarStyle">@style/Widget.MaterialComponents.Snackbar</item>
-    <item name="snackbarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Snackbar</item>
     <item name="switchStyle">@style/Widget.MaterialComponents.CompoundButton.Switch</item>
-    <item name="tabStyle">@style/Widget.MaterialComponents.TabLayout</item>
-    <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox</item>
     <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar</item>
 
     <item name="alertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert</item>
@@ -1496,6 +1523,30 @@
 
     <item name="scrimBackground">@color/mtrl_scrim_color</item>
     <item name="popupMenuBackground">@drawable/mtrl_popupmenu_background_dark</item>
+
+    <item name="minTouchTargetSize">@dimen/mtrl_min_touch_target_size</item>
+
+    <!-- Widget styles -->
+    <item name="appBarLayoutStyle">@style/Widget.MaterialComponents.AppBarLayout.Surface</item>
+    <item name="badgeStyle">@style/Widget.MaterialComponents.Badge</item>
+    <item name="bottomAppBarStyle">@style/Widget.MaterialComponents.BottomAppBar</item>
+    <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView</item>
+    <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
+    <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
+    <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
+    <item name="extendedFloatingActionButtonStyle">@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon</item>
+    <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
+    <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
+    <item name="materialButtonOutlinedStyle">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
+    <item name="materialButtonToggleGroupStyle">@style/Widget.MaterialComponents.MaterialButtonToggleGroup</item>
+    <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
+    <item name="navigationViewStyle">@style/Widget.MaterialComponents.NavigationView</item>
+    <item name="sliderStyle">@style/Widget.MaterialComponents.Slider</item>
+    <item name="snackbarStyle">@style/Widget.MaterialComponents.Snackbar</item>
+    <item name="snackbarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Snackbar</item>
+    <item name="snackbarTextViewStyle">@style/Widget.MaterialComponents.Snackbar.TextView</item>
+    <item name="tabStyle">@style/Widget.MaterialComponents.TabLayout</item>
+    <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox</item>
 
     <!-- Type styles -->
     <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialComponents.Headline1</item>
@@ -1538,8 +1589,6 @@
     <item name="android:colorBackground">@color/design_default_color_background</item>
     <item name="colorError">@color/design_default_color_error</item>
 
-    <item name="minTouchTargetSize">@dimen/mtrl_min_touch_target_size</item>
-
     <!-- Action bar -->
     <item name="actionBarSize">@dimen/mtrl_toolbar_default_height</item>
     <item name="actionBarPopupTheme">@style/ThemeOverlay.MaterialComponents.Light</item>
@@ -1550,30 +1599,15 @@
     <item name="android:contextPopupMenuStyle" ns2:targetApi="n">
       @style/Widget.MaterialComponents.PopupMenu.ContextMenu
     </item>
-    <item name="appBarLayoutStyle">@style/Widget.MaterialComponents.AppBarLayout.Primary</item>
-    <item name="badgeStyle">@style/Widget.MaterialComponents.Badge</item>
+    <item name="buttonBarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
+    <item name="android:buttonBarButtonStyle">?attr/buttonBarButtonStyle</item>
+
     <item name="borderlessButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
-    <item name="bottomAppBarStyle">@style/Widget.MaterialComponents.BottomAppBar</item>
-    <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView</item>
-    <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
     <item name="checkboxStyle">@style/Widget.MaterialComponents.CompoundButton.CheckBox</item>
-    <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
-    <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
-    <item name="extendedFloatingActionButtonStyle">@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon</item>
-    <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
     <item name="listPopupWindowStyle">@style/Widget.MaterialComponents.PopupMenu.ListPopupWindow</item>
-    <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
-    <item name="materialButtonOutlinedStyle">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
-    <item name="materialButtonToggleGroupStyle">@style/Widget.MaterialComponents.MaterialButtonToggleGroup</item>
-    <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
-    <item name="navigationViewStyle">@style/Widget.MaterialComponents.NavigationView</item>
     <item name="popupMenuStyle">@style/Widget.MaterialComponents.PopupMenu</item>
     <item name="radioButtonStyle">@style/Widget.MaterialComponents.CompoundButton.RadioButton</item>
-    <item name="snackbarStyle">@style/Widget.MaterialComponents.Snackbar</item>
-    <item name="snackbarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Snackbar</item>
     <item name="switchStyle">@style/Widget.MaterialComponents.CompoundButton.Switch</item>
-    <item name="tabStyle">@style/Widget.MaterialComponents.TabLayout</item>
-    <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox</item>
     <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar</item>
 
     <!-- Dialog themes -->
@@ -1609,6 +1643,30 @@
 
     <item name="scrimBackground">@color/mtrl_scrim_color</item>
     <item name="popupMenuBackground">@drawable/mtrl_popupmenu_background</item>
+
+    <item name="minTouchTargetSize">@dimen/mtrl_min_touch_target_size</item>
+
+    <!-- Widget styles -->
+    <item name="appBarLayoutStyle">@style/Widget.MaterialComponents.AppBarLayout.Primary</item>
+    <item name="badgeStyle">@style/Widget.MaterialComponents.Badge</item>
+    <item name="bottomAppBarStyle">@style/Widget.MaterialComponents.BottomAppBar</item>
+    <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView</item>
+    <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
+    <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
+    <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
+    <item name="extendedFloatingActionButtonStyle">@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon</item>
+    <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
+    <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
+    <item name="materialButtonOutlinedStyle">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
+    <item name="materialButtonToggleGroupStyle">@style/Widget.MaterialComponents.MaterialButtonToggleGroup</item>
+    <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
+    <item name="navigationViewStyle">@style/Widget.MaterialComponents.NavigationView</item>
+    <item name="sliderStyle">@style/Widget.MaterialComponents.Slider</item>
+    <item name="snackbarStyle">@style/Widget.MaterialComponents.Snackbar</item>
+    <item name="snackbarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Snackbar</item>
+    <item name="snackbarTextViewStyle">@style/Widget.MaterialComponents.Snackbar.TextView</item>
+    <item name="tabStyle">@style/Widget.MaterialComponents.TabLayout</item>
+    <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox</item>
 
     <!-- Type styles -->
     <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialComponents.Headline1</item>
@@ -1700,8 +1758,6 @@
     <item name="android:colorBackground">@color/design_default_color_background</item>
     <item name="colorError">@color/design_default_color_error</item>
 
-    <item name="minTouchTargetSize">@dimen/mtrl_min_touch_target_size</item>
-
     <!-- Action bar -->
     <item name="actionBarSize">@dimen/mtrl_toolbar_default_height</item>
     <item name="actionBarPopupTheme">@style/ThemeOverlay.MaterialComponents.Light</item>
@@ -1712,31 +1768,13 @@
     <item name="android:contextPopupMenuStyle" ns2:targetApi="n">
       @style/Widget.MaterialComponents.PopupMenu.ContextMenu
     </item>
-    <item name="appBarLayoutStyle">@style/Widget.MaterialComponents.AppBarLayout.Primary</item>
-    <item name="badgeStyle">@style/Widget.MaterialComponents.Badge</item>
     <item name="borderlessButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
-    <item name="bottomAppBarStyle">@style/Widget.MaterialComponents.BottomAppBar</item>
-    <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView</item>
     <item name="buttonBarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush</item>
     <item name="checkboxStyle">@style/Widget.MaterialComponents.CompoundButton.CheckBox</item>
-    <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
-    <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
-    <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
-    <item name="extendedFloatingActionButtonStyle">@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon</item>
-    <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
     <item name="listPopupWindowStyle">@style/Widget.MaterialComponents.PopupMenu.ListPopupWindow</item>
-    <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
-    <item name="materialButtonOutlinedStyle">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
-    <item name="materialButtonToggleGroupStyle">@style/Widget.MaterialComponents.MaterialButtonToggleGroup</item>
-    <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
-    <item name="navigationViewStyle">@style/Widget.MaterialComponents.NavigationView</item>
     <item name="popupMenuStyle">@style/Widget.MaterialComponents.PopupMenu</item>
     <item name="radioButtonStyle">@style/Widget.MaterialComponents.CompoundButton.RadioButton</item>
-    <item name="snackbarStyle">@style/Widget.MaterialComponents.Snackbar</item>
-    <item name="snackbarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Snackbar</item>
     <item name="switchStyle">@style/Widget.MaterialComponents.CompoundButton.Switch</item>
-    <item name="tabStyle">@style/Widget.MaterialComponents.TabLayout</item>
-    <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox</item>
     <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar</item>
 
     <item name="alertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert</item>
@@ -1763,6 +1801,30 @@
 
     <item name="scrimBackground">@color/mtrl_scrim_color</item>
     <item name="popupMenuBackground">@drawable/mtrl_popupmenu_background</item>
+
+    <item name="minTouchTargetSize">@dimen/mtrl_min_touch_target_size</item>
+
+    <!-- Widget styles -->
+    <item name="appBarLayoutStyle">@style/Widget.MaterialComponents.AppBarLayout.Primary</item>
+    <item name="badgeStyle">@style/Widget.MaterialComponents.Badge</item>
+    <item name="bottomAppBarStyle">@style/Widget.MaterialComponents.BottomAppBar</item>
+    <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView</item>
+    <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
+    <item name="chipGroupStyle">@style/Widget.MaterialComponents.ChipGroup</item>
+    <item name="chipStandaloneStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
+    <item name="extendedFloatingActionButtonStyle">@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon</item>
+    <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
+    <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
+    <item name="materialButtonOutlinedStyle">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
+    <item name="materialButtonToggleGroupStyle">@style/Widget.MaterialComponents.MaterialButtonToggleGroup</item>
+    <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
+    <item name="navigationViewStyle">@style/Widget.MaterialComponents.NavigationView</item>
+    <item name="sliderStyle">@style/Widget.MaterialComponents.Slider</item>
+    <item name="snackbarStyle">@style/Widget.MaterialComponents.Snackbar</item>
+    <item name="snackbarButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Snackbar</item>
+    <item name="snackbarTextViewStyle">@style/Widget.MaterialComponents.Snackbar.TextView</item>
+    <item name="tabStyle">@style/Widget.MaterialComponents.TabLayout</item>
+    <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox</item>
 
     <!-- Type styles -->
     <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialComponents.Headline1</item>
@@ -2577,6 +2639,8 @@
     <item name="tabUnboundedRipple">false</item>
   </style>
     <style name="Base.Widget.MaterialComponents.AutoCompleteTextView" parent="Widget.AppCompat.AutoCompleteTextView">
+    <item name="enforceMaterialTheme">true</item>
+    <item name="enforceTextAppearance">true</item>
     <item name="android:background">@null</item>
     <item name="android:paddingStart" ns2:ignore="NewApi">12dp</item>
     <item name="android:paddingEnd" ns2:ignore="NewApi">12dp</item>
@@ -2645,7 +2709,37 @@
     <style name="Base.Widget.MaterialComponents.PopupMenu.Overflow" parent="Widget.AppCompat.PopupMenu.Overflow">
     <item name="android:dropDownVerticalOffset">1px</item>
   </style>
-    <style name="Base.Widget.MaterialComponents.TextInputEditText" parent="Widget.AppCompat.EditText">
+    <style name="Base.Widget.MaterialComponents.ProgressIndicator" parent="android:Widget">
+    <item name="indicatorWidth">@dimen/mtrl_progress_indicator_width</item>
+    <item name="inverse">false</item>
+    <item name="growMode">none</item>
+  </style>
+    <style name="Base.Widget.MaterialComponents.ProgressIndicator.Circular">
+    <item name="indicatorType">circular</item>
+    <item name="trackColor">@android:color/transparent</item>
+    <item name="circularRadius">@dimen/mtrl_progress_circular_radius</item>
+    <item name="circularInset">@dimen/mtrl_progress_circular_inset</item>
+  </style>
+    <style name="Base.Widget.MaterialComponents.ProgressIndicator.Linear">
+    <item name="indicatorType">linear</item>
+    <item name="linearSeamless">true</item>
+  </style>
+    <style name="Base.Widget.MaterialComponents.Slider" parent="android:Widget">
+    <item name="haloColor">@color/material_slider_halo_color</item>
+    <item name="haloRadius">@dimen/mtrl_slider_halo_radius</item>
+    <item name="labelStyle">@style/Widget.MaterialComponents.Tooltip</item>
+    <item name="thumbColor">@color/material_slider_thumb_color</item>
+    <item name="thumbElevation">@dimen/mtrl_slider_thumb_elevation</item>
+    <item name="thumbRadius">@dimen/mtrl_slider_thumb_radius</item>
+    <item name="tickColorActive">@color/material_slider_active_tick_marks_color</item>
+    <item name="tickColorInactive">@color/material_slider_inactive_tick_marks_color</item>
+    <item name="trackColorActive">@color/material_slider_active_track_color</item>
+    <item name="trackColorInactive">@color/material_slider_inactive_track_color</item>
+    <item name="trackHeight">@dimen/mtrl_slider_track_height</item>
+  </style>
+    <style name="Base.Widget.MaterialComponents.TextInputEditText" parent="Widget.Design.TextInputEditText">
+    <item name="enforceMaterialTheme">true</item>
+    <item name="enforceTextAppearance">true</item>
     <item name="android:background">@null</item>
     <item name="android:paddingStart" ns2:ignore="NewApi">12dp</item>
     <item name="android:paddingEnd" ns2:ignore="NewApi">12dp</item>
@@ -2654,6 +2748,7 @@
     <item name="android:paddingTop">16dp</item>
     <item name="android:paddingBottom">16dp</item>
     <item name="android:textAppearance">?attr/textAppearanceSubtitle1</item>
+    <item name="textInputLayoutFocusedRectEnabled">true</item>
   </style>
     <style name="Base.Widget.MaterialComponents.TextInputLayout" parent="Widget.Design.TextInputLayout">
     <item name="enforceMaterialTheme">true</item>
@@ -2667,6 +2762,7 @@
     <item name="startIconTint">@color/mtrl_outlined_icon_tint</item>
     <item name="boxCollapsedPaddingTop">0dp</item>
     <item name="boxStrokeColor">@color/mtrl_outlined_stroke_color</item>
+    <item name="boxStrokeErrorColor">@color/mtrl_error</item>
     <item name="boxStrokeWidth">@dimen/mtrl_textinput_box_stroke_width_default</item>
     <item name="boxStrokeWidthFocused">@dimen/mtrl_textinput_box_stroke_width_focused</item>
 
@@ -2675,6 +2771,9 @@
     <item name="errorTextAppearance">?attr/textAppearanceCaption</item>
     <item name="helperTextTextAppearance">?attr/textAppearanceCaption</item>
     <item name="hintTextAppearance">?attr/textAppearanceCaption</item>
+    <item name="placeholderTextAppearance">?attr/textAppearanceSubtitle1</item>
+    <item name="prefixTextAppearance">?attr/textAppearanceSubtitle1</item>
+    <item name="suffixTextAppearance">?attr/textAppearanceSubtitle1</item>
 
     <item name="counterTextColor">@color/mtrl_indicator_text_color</item>
     <item name="counterOverflowTextColor">@color/mtrl_error</item>
@@ -2682,6 +2781,9 @@
     <item name="helperTextTextColor">@color/mtrl_indicator_text_color</item>
     <!-- The color of the label when it is collapsed and the text field is active -->
     <item name="hintTextColor">?attr/colorPrimary</item>
+    <item name="placeholderTextColor">@color/mtrl_indicator_text_color</item>
+    <item name="prefixTextColor">@color/mtrl_indicator_text_color</item>
+    <item name="suffixTextColor">@color/mtrl_indicator_text_color</item>
     <!-- The color of the label in all other text field states (such as resting and disabled) -->
     <item name="android:textColorHint">@color/mtrl_indicator_text_color</item>
 
@@ -2981,6 +3083,10 @@
     <item name="cornerFamily">rounded</item>
     <item name="cornerSize">10px</item>
   </style>
+    <style name="ShapeAppearance.MaterialComponents.Tooltip" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">4dp</item>
+  </style>
     <style name="ShapeAppearanceOverlay" parent=""/>
     <style name="ShapeAppearanceOverlay.BottomLeftDifferentCornerSize">
     <item name="cornerSizeBottomLeft">20px</item>
@@ -3002,7 +3108,6 @@
     <item name="cornerSize">50%</item>
   </style>
     <style name="ShapeAppearanceOverlay.MaterialComponents.ExtendedFloatingActionButton" parent="">
-    <!-- TODO(b/121352029): ExtendedFloatingActionButton adds 1px to the height -->
     <item name="cornerSize">@null</item>
   </style>
     <style name="ShapeAppearanceOverlay.MaterialComponents.FloatingActionButton" parent="">
@@ -3159,10 +3264,13 @@
     <style name="TextAppearance.Design.Hint" parent="TextAppearance.AppCompat.Caption">
     <item name="android:textColor">?attr/colorControlActivated</item>
   </style>
+    <style name="TextAppearance.Design.Placeholder" parent="TextAppearance.AppCompat.Body1"/>
+    <style name="TextAppearance.Design.Prefix" parent="TextAppearance.AppCompat.Body1"/>
     <style name="TextAppearance.Design.Snackbar.Message" parent="android:TextAppearance">
     <item name="android:textSize">@dimen/design_snackbar_text_size</item>
     <item name="android:textColor">?android:textColorPrimary</item>
   </style>
+    <style name="TextAppearance.Design.Suffix" parent="TextAppearance.AppCompat.Body1"/>
     <style name="TextAppearance.Design.Tab" parent="TextAppearance.AppCompat.Button">
     <item name="android:textSize">@dimen/design_tab_text_size</item>
     <item name="android:textColor">@color/mtrl_tabs_legacy_text_color_selector</item>
@@ -3256,6 +3364,9 @@
     <item name="android:letterSpacing">0.009375</item>
   </style>
     <style name="TextAppearance.MaterialComponents.Subtitle2" parent="Base.TextAppearance.MaterialComponents.Subtitle2"/>
+    <style name="TextAppearance.MaterialComponents.Tooltip" parent="TextAppearance.MaterialComponents.Body2">
+    <item name="android:textColor">?attr/colorOnPrimary</item>
+  </style>
     <style name="TextAppearance.Widget.AppCompat.ExpandedMenu.Item" parent="Base.TextAppearance.Widget.AppCompat.ExpandedMenu.Item">
     </style>
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Subtitle" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
@@ -3317,7 +3428,7 @@
     <style name="Theme.MaterialComponents.BottomSheetDialog" parent="Theme.MaterialComponents.Dialog">
     <item name="android:windowBackground">@android:color/transparent</item>
     <item name="android:windowAnimationStyle">@style/Animation.MaterialComponents.BottomSheetDialog</item>
-    <item name="bottomSheetStyle">@style/Widget.Design.BottomSheet.Modal</item>
+    <item name="bottomSheetStyle">@style/Widget.MaterialComponents.BottomSheet.Modal</item>
   </style>
     <style name="Theme.MaterialComponents.Bridge" parent="Base.Theme.MaterialComponents.Bridge"/>
     <style name="Theme.MaterialComponents.CompactMenu" parent="Base.Theme.MaterialComponents.CompactMenu"/>
@@ -3340,8 +3451,8 @@
     <style name="Theme.MaterialComponents.Dialog" parent="Base.Theme.MaterialComponents.Dialog"/>
     <style name="Theme.MaterialComponents.Dialog.Alert" parent="Base.Theme.MaterialComponents.Dialog.Alert"/>
     <style name="Theme.MaterialComponents.Dialog.Alert.Bridge" parent="Base.Theme.MaterialComponents.Dialog.Bridge">
-    <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-    <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+    <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
   </style>
     <style name="Theme.MaterialComponents.Dialog.Bridge" parent="Base.Theme.MaterialComponents.Dialog.Bridge"/>
     <style name="Theme.MaterialComponents.Dialog.FixedSize" parent="Base.Theme.MaterialComponents.Dialog.FixedSize"/>
@@ -3353,8 +3464,8 @@
   </style>
     <style name="Theme.MaterialComponents.Dialog.MinWidth" parent="Base.Theme.MaterialComponents.Dialog.MinWidth"/>
     <style name="Theme.MaterialComponents.Dialog.MinWidth.Bridge" parent="Base.Theme.MaterialComponents.Dialog.Bridge">
-    <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-    <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+    <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
   </style>
     <style name="Theme.MaterialComponents.DialogWhenLarge" parent="Base.Theme.MaterialComponents.DialogWhenLarge">
   </style>
@@ -3365,7 +3476,7 @@
     <style name="Theme.MaterialComponents.Light.BottomSheetDialog" parent="Theme.MaterialComponents.Light.Dialog">
     <item name="android:windowBackground">@android:color/transparent</item>
     <item name="android:windowAnimationStyle">@style/Animation.MaterialComponents.BottomSheetDialog</item>
-    <item name="bottomSheetStyle">@style/Widget.Design.BottomSheet.Modal</item>
+    <item name="bottomSheetStyle">@style/Widget.MaterialComponents.BottomSheet.Modal</item>
   </style>
     <style name="Theme.MaterialComponents.Light.Bridge" parent="Base.Theme.MaterialComponents.Light.Bridge"/>
     <style name="Theme.MaterialComponents.Light.DarkActionBar" parent="Base.Theme.MaterialComponents.Light.DarkActionBar"/>
@@ -3373,8 +3484,8 @@
     <style name="Theme.MaterialComponents.Light.Dialog" parent="Base.Theme.MaterialComponents.Light.Dialog"/>
     <style name="Theme.MaterialComponents.Light.Dialog.Alert" parent="Base.Theme.MaterialComponents.Light.Dialog.Alert"/>
     <style name="Theme.MaterialComponents.Light.Dialog.Alert.Bridge" parent="Base.Theme.MaterialComponents.Light.Dialog.Bridge">
-    <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-    <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+    <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
   </style>
     <style name="Theme.MaterialComponents.Light.Dialog.Bridge" parent="Base.Theme.MaterialComponents.Light.Dialog.Bridge"/>
     <style name="Theme.MaterialComponents.Light.Dialog.FixedSize" parent="Base.Theme.MaterialComponents.Light.Dialog.FixedSize"/>
@@ -3386,8 +3497,8 @@
   </style>
     <style name="Theme.MaterialComponents.Light.Dialog.MinWidth" parent="Base.Theme.MaterialComponents.Light.Dialog.MinWidth"/>
     <style name="Theme.MaterialComponents.Light.Dialog.MinWidth.Bridge" parent="Base.Theme.MaterialComponents.Light.Dialog.Bridge">
-    <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-    <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+    <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
   </style>
     <style name="Theme.MaterialComponents.Light.DialogWhenLarge" parent="Base.Theme.MaterialComponents.Light.DialogWhenLarge">
   </style>
@@ -3425,7 +3536,7 @@
     <style name="ThemeOverlay.Design.TextInputEditText" parent=""/>
     <style name="ThemeOverlay.MaterialComponents" parent="ThemeOverlay.AppCompat"/>
     <style name="ThemeOverlay.MaterialComponents.ActionBar" parent="ThemeOverlay.AppCompat.ActionBar"/>
-    <style name="ThemeOverlay.MaterialComponents.ActionBar.Primary" parent="">
+    <style name="ThemeOverlay.MaterialComponents.ActionBar.Primary" parent="ThemeOverlay.AppCompat.ActionBar">
     <item name="android:textColorPrimary">?attr/colorOnPrimary</item>
     <item name="android:textColorSecondary">@color/material_on_primary_emphasis_medium</item>
     <item name="actionMenuTextColor">?attr/colorOnPrimary</item>
@@ -3433,7 +3544,7 @@
     <!-- Used to tint the ActionMode background and preserve the underline. -->
     <item name="android:colorBackground">?attr/colorPrimary</item>
   </style>
-    <style name="ThemeOverlay.MaterialComponents.ActionBar.Surface" parent="">
+    <style name="ThemeOverlay.MaterialComponents.ActionBar.Surface" parent="ThemeOverlay.AppCompat.ActionBar">
     <item name="android:textColorPrimary">@color/material_on_surface_emphasis_high_type</item>
     <item name="android:textColorSecondary">@color/material_on_surface_emphasis_medium</item>
     <item name="actionMenuTextColor">@color/material_on_surface_emphasis_medium</item>
@@ -3571,6 +3682,9 @@
     <style name="ThemeOverlay.MaterialComponents.Toolbar.Surface" parent="">
     <item name="colorControlNormal">@color/material_on_surface_emphasis_medium</item>
     <item name="actionMenuTextColor">@color/material_on_surface_emphasis_medium</item>
+  </style>
+    <style name="ThemeOverlayColorAccentRed" ns2:ignore="NewApi">
+    <item name="android:colorAccent">#FFFF0000</item>
   </style>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
@@ -3745,6 +3859,10 @@
     <item name="tabMode">fixed</item>
     <item name="tabIndicatorFullWidth">true</item>
   </style>
+    <style name="Widget.Design.TextInputEditText" parent="Widget.AppCompat.EditText">
+    <item name="enforceMaterialTheme">false</item>
+    <item name="enforceTextAppearance">false</item>
+  </style>
     <style name="Widget.Design.TextInputLayout" parent="android:Widget">
     <item name="materialThemeOverlay">@style/ThemeOverlay.Design.TextInputEditText</item>
     <item name="enforceMaterialTheme">false</item>
@@ -3764,12 +3882,18 @@
     <item name="errorTextAppearance">@style/TextAppearance.Design.Error</item>
     <item name="helperTextTextAppearance">@style/TextAppearance.Design.HelperText</item>
     <item name="hintTextAppearance">@style/TextAppearance.Design.Hint</item>
+    <item name="placeholderTextAppearance">@style/TextAppearance.Design.Placeholder</item>
+    <item name="prefixTextAppearance">@style/TextAppearance.Design.Prefix</item>
+    <item name="suffixTextAppearance">@style/TextAppearance.Design.Suffix</item>
 
     <item name="counterTextColor">@null</item>
     <item name="counterOverflowTextColor">@null</item>
     <item name="errorTextColor">@null</item>
     <item name="helperTextTextColor">@null</item>
     <item name="hintTextColor">@null</item>
+    <item name="placeholderTextColor">@null</item>
+    <item name="prefixTextColor">@null</item>
+    <item name="suffixTextColor">@null</item>
 
     <item name="shapeAppearance">@null</item>
     <item name="shapeAppearanceOverlay">@null</item>
@@ -3824,6 +3948,9 @@
     <item name="android:minHeight">@dimen/mtrl_bottomappbar_height</item>
     <item name="maxButtonHeight">@dimen/mtrl_bottomappbar_height</item>
     <item name="elevation">8dp</item>
+    <item name="paddingBottomSystemWindowInsets">true</item>
+    <item name="paddingLeftSystemWindowInsets">true</item>
+    <item name="paddingRightSystemWindowInsets">true</item>
   </style>
     <style name="Widget.MaterialComponents.BottomAppBar.Colored" parent="Widget.MaterialComponents.BottomAppBar">
     <item name="backgroundTint">?attr/colorPrimary</item>
@@ -3870,6 +3997,7 @@
   </style>
     <style name="Widget.MaterialComponents.Button" parent="Widget.AppCompat.Button">
     <item name="enforceMaterialTheme">true</item>
+    <item name="android:background">@empty</item>
     <item name="enforceTextAppearance">true</item>
     <item name="android:textAppearance">?attr/textAppearanceButton</item>
     <item name="android:textColor">@color/mtrl_btn_text_color_selector</item>
@@ -4029,13 +4157,13 @@
     <item name="android:stateListAnimator" ns2:ignore="NewApi">
       @animator/mtrl_extended_fab_state_list_animator
     </item>
-    <item name="android:textColor">@color/mtrl_extended_fab_text_color_selector</item>
-    <item name="backgroundTint">@color/mtrl_extended_fab_bg_color_selector</item>
+    <item name="android:textColor">@color/mtrl_fab_icon_text_color_selector</item>
+    <item name="backgroundTint">@color/mtrl_fab_bg_color_selector</item>
     <item name="elevation">@dimen/mtrl_extended_fab_elevation</item>
     <item name="iconPadding">@dimen/mtrl_extended_fab_icon_text_spacing</item>
     <item name="iconSize">@dimen/mtrl_extended_fab_icon_size</item>
-    <item name="iconTint">@color/mtrl_extended_fab_text_color_selector</item>
-    <item name="rippleColor">@color/mtrl_extended_fab_ripple_color</item>
+    <item name="iconTint">@color/mtrl_fab_icon_text_color_selector</item>
+    <item name="rippleColor">@color/mtrl_fab_ripple_color</item>
     <item name="shapeAppearanceOverlay">
       @style/ShapeAppearanceOverlay.MaterialComponents.ExtendedFloatingActionButton
     </item>
@@ -4056,8 +4184,8 @@
     <item name="enforceMaterialTheme">true</item>
     <item name="ensureMinTouchTargetSize">true</item>
     <item name="elevation">@dimen/mtrl_fab_elevation</item>
-    <item name="backgroundTint">?attr/colorSecondary</item>
-    <item name="tint">?attr/colorOnSecondary</item>
+    <item name="backgroundTint">@color/mtrl_fab_bg_color_selector</item>
+    <item name="tint">@color/mtrl_fab_icon_text_color_selector</item>
     <item name="hoveredFocusedTranslationZ">@dimen/mtrl_fab_translation_z_hovered_focused</item>
     <item name="pressedTranslationZ">@dimen/mtrl_fab_translation_z_pressed</item>
     <item name="rippleColor">@color/mtrl_fab_ripple_color</item>
@@ -4210,6 +4338,22 @@
     <style name="Widget.MaterialComponents.PopupMenu.ContextMenu" parent="Base.Widget.MaterialComponents.PopupMenu.ContextMenu"/>
     <style name="Widget.MaterialComponents.PopupMenu.ListPopupWindow" parent="Base.Widget.MaterialComponents.PopupMenu.ListPopupWindow"/>
     <style name="Widget.MaterialComponents.PopupMenu.Overflow" parent="Base.Widget.MaterialComponents.PopupMenu.Overflow"/>
+    <style name="Widget.MaterialComponents.ProgressIndicator.Circular.Determinate" parent="Base.Widget.MaterialComponents.ProgressIndicator.Circular">
+    <item name="android:indeterminate">false</item>
+  </style>
+    <style name="Widget.MaterialComponents.ProgressIndicator.Circular.Indeterminate" parent="Base.Widget.MaterialComponents.ProgressIndicator.Circular">
+    <item name="android:indeterminate">true</item>
+  </style>
+    <style name="Widget.MaterialComponents.ProgressIndicator.Linear.Determinate" parent="Base.Widget.MaterialComponents.ProgressIndicator.Linear">
+    <item name="android:indeterminate">false</item>
+  </style>
+    <style name="Widget.MaterialComponents.ProgressIndicator.Linear.Indeterminate" parent="Base.Widget.MaterialComponents.ProgressIndicator.Linear">
+    <item name="android:indeterminate">true</item>
+  </style>
+    <style name="Widget.MaterialComponents.ShapeableImageView" parent="android:Widget">
+    <item name="strokeColor">@color/material_on_surface_stroke</item>
+  </style>
+    <style name="Widget.MaterialComponents.Slider" parent="Base.Widget.MaterialComponents.Slider"/>
     <style name="Widget.MaterialComponents.Snackbar" parent="Widget.Design.Snackbar">
     <!-- Null out the background here so the programmatically defined default Snackbar background
          will be used, which supports the Material color theming attributes. -->
@@ -4222,6 +4366,18 @@
     <style name="Widget.MaterialComponents.Snackbar.FullWidth" parent="Widget.Design.Snackbar">
     <item name="backgroundOverlayColorAlpha">@dimen/mtrl_snackbar_background_overlay_color_alpha</item>
     <item name="actionTextColorAlpha">@dimen/mtrl_snackbar_action_text_color_alpha</item>
+  </style>
+    <style name="Widget.MaterialComponents.Snackbar.TextView" parent="Widget.AppCompat.TextView">
+    <item name="android:alpha">@dimen/material_emphasis_high_type</item>
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">@integer/design_snackbar_text_max_lines</item>
+    <item name="android:textAlignment" ns2:ignore="NewApi">viewStart</item>
+    <item name="android:textAppearance">?attr/textAppearanceBody2</item>
+    <item name="android:textColor">?attr/colorSurface</item>
+    <item name="android:paddingTop">@dimen/design_snackbar_padding_vertical</item>
+    <item name="android:paddingBottom">@dimen/design_snackbar_padding_vertical</item>
+    <item name="android:paddingLeft">@dimen/design_snackbar_padding_horizontal</item>
+    <item name="android:paddingRight">@dimen/design_snackbar_padding_horizontal</item>
   </style>
     <style name="Widget.MaterialComponents.TabLayout" parent="Widget.Design.TabLayout">
     <item name="enforceMaterialTheme">true</item>
@@ -4336,6 +4492,14 @@
     <item name="subtitleTextColor">@color/material_on_surface_emphasis_medium</item>
     <!-- Note: this theme overlay will only work if the style is applied directly to a Toolbar. -->
     <item name="android:theme">@style/ThemeOverlay.MaterialComponents.Toolbar.Surface</item>
+  </style>
+    <style name="Widget.MaterialComponents.Tooltip" parent="android:Widget">
+    <item name="android:layout_margin">8dp</item>
+    <item name="android:minWidth">@dimen/mtrl_tooltip_minWidth</item>
+    <item name="android:minHeight">@dimen/mtrl_tooltip_minHeight</item>
+    <item name="android:padding">@dimen/mtrl_tooltip_padding</item>
+    <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Tooltip</item>
+    <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.Tooltip</item>
   </style>
     <style name="Widget.Support.CoordinatorLayout" parent="android:Widget">
         <item name="statusBarBackground">#000000</item>
@@ -5141,6 +5305,10 @@
       <!-- Gravity.BOTTOM | Gravity.START -->
       <enum name="BOTTOM_START" value="8388691"/>
     </attr>
+
+    <!-- Offset moves the badge towards the center of its anchor. -->
+    <attr format="dimension" name="horizontalOffset"/>
+    <attr format="dimension" name="verticalOffset"/>
   </declare-styleable>
     <declare-styleable name="BottomAppBar">
     <!-- Background for the BottomAppBar. -->
@@ -5169,6 +5337,12 @@
     <attr format="dimension" name="fabCradleVerticalOffset"/>
     <!-- Whether the BottomAppBar should hide when a NestedScrollView is scrolled. -->
     <attr format="boolean" name="hideOnScroll"/>
+    <!-- Whether the BottomAppBar should apply padding to be above the bottom window insets. -->
+    <attr name="paddingBottomSystemWindowInsets"/>
+    <!-- Whether the BottomAppBar should apply padding to be to the right of the left window insets. -->
+    <attr name="paddingLeftSystemWindowInsets"/>
+    <!-- Whether the BottomAppBar should apply padding to be to the left of the right window insets. -->
+    <attr name="paddingRightSystemWindowInsets"/>
   </declare-styleable>
     <declare-styleable name="BottomNavigationView">
     <!-- Background tint for the BottomNavigationView. -->
@@ -5231,6 +5405,9 @@
     <attr format="boolean" name="behavior_skipCollapsed"/>
     <!-- Whether height of expanded sheet wraps content or not -->
     <attr format="boolean" name="behavior_fitToContents"/>
+    <!-- Whether this bottom sheet is draggable. If not, the app will have to supply different
+         means to expand and collapse the sheet -->
+    <attr format="boolean" name="behavior_draggable"/>
     <!-- The ratio to be used to set the height of half-expanded state in proportion to parent, when
          fitToContents is false. Defaults to true half, 0.5, if not explicitly set. Ratio must be a
          float value between 0 and 1 and produce a half-expanded state height larger than the
@@ -5238,7 +5415,7 @@
     <attr format="reference|float" name="behavior_halfExpandedRatio"/>
     <!-- The top offset of the BottomSheet in the expanded-state when fitsToContent is false.
          The default value is 0, which results in the sheet matching the parent's top. -->
-    <attr format="reference|integer" name="behavior_expandedOffset"/>
+    <attr format="reference|dimension" name="behavior_expandedOffset"/>
     <!-- Shape appearance style reference for BottomSheet. Attribute declaration is in the shape
          package. -->
      <attr name="shapeAppearance"/>
@@ -5267,6 +5444,9 @@
            This is the default behavior. -->
       <flag name="none" value="0"/>
     </attr>
+    <!-- Sets whether this bottom sheet should adjust it's position based on the system gesture area
+    on Android Q and above. Value is false (insets respected) by default. -->
+    <attr format="boolean" name="gestureInsetBottomIgnored"/>
     <attr name="android:elevation"/>
 
   </declare-styleable>
@@ -5305,6 +5485,8 @@
     </declare-styleable>
     <declare-styleable name="Chip">
     <!-- Surface layer color to apply to the chip. -->
+    <!-- Do not expose publicly because there is no public getter/setter and the user doesn't need
+         to configure this.-->
     <attr format="color" name="chipSurfaceColor"/>
     <!-- Background color to apply to the chip. -->
     <attr format="color" name="chipBackgroundColor"/>
@@ -5365,6 +5547,8 @@
     <attr format="boolean" name="checkedIconEnabled"/>
     <!-- Check icon drawable to overlay the chip's icon. -->
     <attr name="checkedIcon"/>
+    <!-- Tint to apply to the chip's checked icon. -->
+    <attr name="checkedIconTint"/>
 
     <!-- Motion spec for show animation. This should be a MotionSpec resource. -->
     <attr name="showMotionSpec"/>
@@ -5429,6 +5613,9 @@
     <!-- Whether only a single chip in this group is allowed to be checked at any time. By default,
          this is false and multiple chips in this group are allowed to be checked at once. -->
     <attr name="singleSelection"/>
+    <!-- Whether we prevent all child chips from being deselected.
+         It's false by default. -->
+    <attr name="selectionRequired"/>
     <!-- The id of the child chip that should be checked by default within this chip group. -->
     <attr format="reference" name="checkedChip"/>
 
@@ -5524,6 +5711,8 @@
     <attr format="boolean" name="titleEnabled"/>
     <!-- The title to show when titleEnabled is set to true. -->
     <attr name="title"/>
+    <!-- The maximum number of lines to display in the expanded state. Experimental Feature. -->
+    <attr format="integer" name="maxLines"/>
   </declare-styleable>
     <declare-styleable name="CollapsingToolbarLayout_Layout">
     <attr name="layout_collapseMode">
@@ -5714,6 +5903,8 @@
     <attr format="boolean" name="behavior_autoShrink"/>
   </declare-styleable>
     <declare-styleable name="FloatingActionButton">
+    <!-- Whether the FloatingActionButton is enabled -->
+    <attr name="android:enabled"/>
     <!-- Background for the FloatingActionButton -->
     <attr name="backgroundTint"/>
     <attr name="backgroundTintMode"/>
@@ -5845,6 +6036,7 @@
     <declare-styleable name="ForegroundLinearLayout">
     <attr name="android:foreground"/>
     <attr name="android:foregroundGravity"/>
+    <!-- Do not expose publicly, used by ForegroundLinearLayout but never set by any style.  -->
     <attr format="boolean" name="foregroundInsidePadding"/>
   </declare-styleable>
     <declare-styleable name="Fragment">
@@ -5900,6 +6092,13 @@
         <!-- The current color for the offset inside the gradient. -->
         <attr name="android:color"/>
     </declare-styleable>
+    <declare-styleable name="Insets">
+    <!-- Just adding the parameters that we need for now. We can add others if we need them, but
+         ideally we'll be able to use https://github.com/chrisbanes/insetter once it's ready. -->
+    <attr format="boolean" name="paddingBottomSystemWindowInsets"/>
+    <attr format="boolean" name="paddingLeftSystemWindowInsets"/>
+    <attr format="boolean" name="paddingRightSystemWindowInsets"/>
+  </declare-styleable>
     <declare-styleable name="LinearConstraintLayout"><attr name="android:orientation"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat">
         <!-- Should the layout be a column or a row?  Use "horizontal"
@@ -5962,6 +6161,9 @@
     <attr format="reference" name="materialAlertDialogTitleTextStyle"/>
     <attr format="reference" name="materialAlertDialogBodyTextStyle"/>
   </declare-styleable>
+    <declare-styleable name="MaterialAutoCompleteTextView" parent="AppCompatAutoCompleteTextView">
+    <attr name="android:inputType"/>
+  </declare-styleable>
     <declare-styleable name="MaterialButton">
     <!-- Whether the button can be checked. -->
     <attr name="android:checkable"/>
@@ -5969,7 +6171,12 @@
     <attr name="android:insetRight"/>
     <attr name="android:insetTop"/>
     <attr name="android:insetBottom"/>
-    <!-- Background for the MaterialButton -->
+    <!-- Background for the MaterialButton. If this is set to a drawable or color, MaterialButton
+         will respect this background and not create its own MaterialShapeDrawable for the
+         background. This means that the insets, shape appearance, and stroke will be ignored.
+         If this attribute is not set or is @empty or @null, a MaterialShapeDrawable will be used
+         for the background based on the insets, shape appearance, and stroke. -->
+    <attr name="android:background"/>
     <attr name="backgroundTint"/>
     <attr name="backgroundTintMode"/>
     <!-- Elevation for the MaterialButton. -->
@@ -6023,6 +6230,10 @@
          default, this is false and multiple buttons in this group are allowed to be checked at
          once. -->
     <attr name="singleSelection"/>
+
+    <!-- Whether we prevent all child buttons from being deselected.
+         It's false by default. -->
+    <attr name="selectionRequired"/>
     <!-- The id of the child button that should be checked by default within this button group. -->
     <attr format="reference" name="checkedButton"/>
   </declare-styleable>
@@ -6057,7 +6268,7 @@
     <!-- Check icon drawable. -->
     <attr name="checkedIcon"/>
     <!-- Tint color for the checked icon. -->
-    <attr format="color" name="checkedIconTint"/>
+    <attr name="checkedIconTint"/>
     <!-- Ripple color for the Card. -->
     <attr name="rippleColor"/>
     <!-- State when a Card is being dragged. -->
@@ -6092,6 +6303,8 @@
       be ignored. This value should be set to false when using custom drawables
       that should not be tinted. This value is ignored if a buttonTint is set. -->
     <attr name="useMaterialThemeColors"/>
+    <!-- Tint for the radio. -->
+    <attr name="buttonTint"/>
   </declare-styleable>
     <declare-styleable name="MaterialShape">
     <!-- Shape appearance style reference to be used to construct a ShapeAppearanceModel. -->
@@ -6354,6 +6567,91 @@
         <!-- State identifier indicating the popup will be above the anchor. -->
         <attr format="boolean" name="state_above_anchor"/>
     </declare-styleable>
+    <declare-styleable name="ProgressIndicator">
+    <!-- The type of the progress indicator, either linear or circular. -->
+    <attr name="indicatorType">
+      <!-- The indicator appears as a horizontal bar. -->
+      <enum name="linear" value="0"/>
+      <!-- The indicator appears as a circular spinner. -->
+      <enum name="circular" value="1"/>
+    </attr>
+
+    <!-- Whether the progress indicator should be indeteminate mode. -->
+    <attr name="android:indeterminate"/>
+
+    <!-- The width of the progress track and indicator. -->
+    <attr format="dimension" name="indicatorWidth"/>
+    <!--
+      The single color used for the indicator in determinate/indeterminate mode.
+      By default it uses theme primary color.
+    -->
+    <attr format="color" name="indicatorColor"/>
+    <!--
+      A color array used for multiple color indeterminate indicator. If color
+      array is used while determinate mode is set, the first color in array
+      will be used.
+    -->
+    <attr format="reference" name="indicatorColors"/>
+    <!--
+      The color used for the progress track. If not defined, it will be set to
+      the indicatorColor and apply the android:disabledAlpha from the theme.
+    -->
+    <attr name="trackColor"/>
+
+    <!--
+      Whether to inverse the progress direction. Linear positive direction is
+      start-to-end; circular positive direction is clockwise.
+    -->
+    <attr format="boolean" name="inverse"/>
+    <!-- How the progress indicator appears and disappears. -->
+    <attr name="growMode">
+      <!-- There is no animation used while showing or hiding. -->
+      <enum name="none" value="0"/>
+      <!--
+        For linear type, the progress indicator appears as expanding from the
+        top to the bottom (downward), and disappears with a reversed animation.
+        For circular type, the progress indicator appears as expanding from the
+        outer edge to the inner edge (inward radial direction), and disappears
+        with a reversed animation.
+      -->
+      <enum name="incoming" value="1"/>
+      <!--
+        For linear type, the progress indicator appears as expanding from the
+        bottom to the top (upward), and disappears with a reversed animation.
+        For circular type, the progress indicator appears as expanding from the
+        inner edge to the outer edge (outward radial direction), and disappears
+        with a reversed animation.
+      -->
+      <enum name="outgoing" value="2"/>
+      <!--
+        The progress indicator will expand from and shrink to the central line
+        of the indicator.
+      -->
+      <enum name="bidirectional" value="3"/>
+    </attr>
+
+    <!--
+      Defines the radius of the circular progress indicator. This uses the
+      central line of the indicator as reference. Ignored for linear progress
+      indicator.
+    -->
+    <attr format="dimension" name="circularRadius"/>
+    <!--
+      The extra space from the outer edge of the indicator to the edge of the
+      canvas. Ignored for linear progress indicator.
+    -->
+    <attr format="dimension" name="circularInset"/>
+    <!--
+      Whether to use seamless style animation on linear indicator in different
+      colors when it's possible, i.e., in linear indeterminate mode with more
+      than 3 colors (inclusive) are defined. Ignored for circular progress
+      indicator.
+    -->
+    <attr format="boolean" name="linearSeamless"/>
+  </declare-styleable>
+    <declare-styleable name="RangeSlider">
+    <attr format="reference" name="values"/>
+  </declare-styleable>
     <declare-styleable name="RecycleListView">
         <!-- Bottom padding to use when no buttons are present. -->
         <attr format="dimension" name="paddingBottomNoButtons"/>
@@ -6471,11 +6769,68 @@
       <enum name="cut" value="1"/>
     </attr>
   </declare-styleable>
+    <declare-styleable name="ShapeableImageView">
+    <attr name="strokeWidth"/>
+    <attr name="strokeColor"/>
+
+    <!-- Shape appearance style reference for ShapeableImageView. Attribute declaration is in the
+         shape package. -->
+    <attr name="shapeAppearance"/>
+    <!-- Shape appearance overlay style reference for ShapeableImageView. To be used to augment
+         attributes declared in the shapeAppearance. Attribute declaration is in the shape package.
+         -->
+    <attr name="shapeAppearanceOverlay"/>
+  </declare-styleable>
+    <declare-styleable name="Slider">
+    <attr name="android:value"/>
+    <attr name="android:valueFrom"/>
+    <attr name="android:valueTo"/>
+    <attr name="android:stepSize"/>
+    <!-- The color of the slider's halo. -->
+    <attr format="color" name="haloColor"/>
+    <!-- The radius of the halo. -->
+    <attr format="dimension" name="haloRadius"/>
+    <!-- Determines if Slider should increase its default height to include space for the label. -->
+    <attr name="labelBehavior">
+      <!-- Mode that draws the label floating above the bounds of this view. -->
+      <enum name="floating" value="0"/>
+      <!-- Mode that draws the label within the bounds of the view. -->
+      <enum name="withinBounds" value="1"/>
+      <!-- Mode that prevents the label from being drawn -->
+      <enum name="gone" value="2"/>
+    </attr>
+    <!-- The style used for the label TooltipDrawable. -->
+    <attr format="reference" name="labelStyle"/>
+    <!-- The color of the slider's thumb. -->
+    <attr format="color" name="thumbColor"/>
+    <!-- The elevation of the thumb. -->
+    <attr format="dimension" name="thumbElevation"/>
+    <!-- The radius of the thumb. -->
+    <attr format="dimension" name="thumbRadius"/>
+    <!-- The color of the slider's tick marks. Only used when the slider is in discrete mode. -->
+    <attr format="color" name="tickColor"/>
+    <!-- The color of the slider's tick marks for the active portion of the track. Only used when
+         the slider is in discrete mode. -->
+    <attr format="color" name="tickColorActive"/>
+    <!-- The color of the slider's tick marks for the inactive portion of the track. Only used when
+         the slider is in discrete mode. -->
+    <attr format="color" name="tickColorInactive"/>
+    <!-- The color of the track. -->
+    <attr name="trackColor"/>
+    <!-- The color of active portion of the track. -->
+    <attr format="color" name="trackColorActive"/>
+    <!-- The color of inactive portion of the track. -->
+    <attr format="color" name="trackColorInactive"/>
+    <!-- The height of the track. -->
+    <attr format="dimension" name="trackHeight"/>
+  </declare-styleable>
     <declare-styleable name="Snackbar">
     <!-- Style to use for Snackbars in this theme. -->
     <attr format="reference" name="snackbarStyle"/>
     <!-- Style to use for action button within a Snackbar in this theme. -->
     <attr format="reference" name="snackbarButtonStyle"/>
+    <!-- Style to use for message text within a Snackbar in this theme. -->
+    <attr format="reference" name="snackbarTextViewStyle"/>
   </declare-styleable>
     <declare-styleable name="SnackbarLayout">
     <attr name="android:maxWidth"/>
@@ -6488,8 +6843,14 @@
       <!-- Mode that corresponds to the fade in and out animations. -->
       <enum name="fade" value="1"/>
     </attr>
-    <!-- Alpha level for the color that is overlaid on top of the background color. -->
+    <!-- Alpha level for the color that is overlaid on top of the background color. Ignored if
+         backgroundTint is set. -->
     <attr format="float" name="backgroundOverlayColorAlpha"/>
+    <!-- Background tint used by the Snackbar background drawable. Accepts a ColorStateList or
+         ColorInt. -->
+    <attr name="backgroundTint"/>
+    <!-- Background tint mode used by the Snackbar background drawable. -->
+    <attr name="backgroundTintMode"/>
     <!-- Alpha level for the action button text, to allow for adjusting the lightness or darkness of
          the theme color used for Snackbar text buttons (e.g., colorPrimary). -->
     <attr format="float" name="actionTextColorAlpha"/>
@@ -6537,6 +6898,10 @@
         <!-- Reference to a drawable resource to use for the state. If not
              given, the drawable must be defined by the first child tag. -->
         <attr name="android:drawable"/>
+    </declare-styleable>
+    <declare-styleable name="SwipeRefreshLayout">
+        <!-- Background color for SwipeRefreshLayout progress spinner. -->
+        <attr format="color" name="swipeRefreshLayoutProgressSpinnerBackgroundColor"/>
     </declare-styleable>
     <declare-styleable name="SwitchCompat">
         <!-- Drawable to use as the "thumb" that switches back and forth. -->
@@ -6661,6 +7026,7 @@
     <attr name="tabGravity">
       <enum name="fill" value="0"/>
       <enum name="center" value="1"/>
+      <enum name="start" value="2"/>
     </attr>
     <!-- Whether to display tab labels horizontally inline with icons, or underneath icons. -->
     <attr format="boolean" name="tabInlineLabel"/>
@@ -6727,12 +7093,20 @@
         <!-- OpenType font variation settings, available aftear api 26. -->
         <attr name="fontVariationSettings"/>
     </declare-styleable>
+    <declare-styleable name="TextInputEditText">
+    <!-- Whether the TextInputEditText should use the TextInputLayout's focused
+         rectangle instead of its own. -->
+    <attr format="boolean" name="textInputLayoutFocusedRectEnabled"/>
+  </declare-styleable>
     <declare-styleable name="TextInputLayout">
-    <!-- The text color for input text. -->
-    <attr name="android:textColorHint"/>
-
+    <!-- Whether the layout is enabled -->
+    <attr name="android:enabled"/>
     <!-- The hint to display in the floating label. -->
     <attr name="android:hint"/>
+    <!-- The text color for the hint when the text field is not activated (such
+         as for the resting and disabled states). -->
+    <attr name="android:textColorHint"/>
+
     <!-- Whether the layout's floating label functionality is enabled. -->
     <attr format="boolean" name="hintEnabled"/>
     <!-- Whether to animate hint state changes. -->
@@ -6760,6 +7134,10 @@
     <!-- Text color for any error message displayed.
          If set, this takes precedence over errorTextAppearance. -->
     <attr format="color" name="errorTextColor"/>
+    <!-- Text to set as the content description for the error view.
+         Should be set when the error message has special characters that a
+         screen reader is not able to announce properly. -->
+    <attr format="string" name="errorContentDescription"/>
     <!-- End icon to be shown when an error is displayed. -->
     <attr format="reference" name="errorIconDrawable"/>
     <!-- Tint color to use for the error icon. -->
@@ -6796,6 +7174,29 @@
     <!-- Text color of the character counter when the text is longer than the max.
          If set, this takes precedence over counterOverflowTextAppearance. -->
     <attr format="reference" name="counterOverflowTextColor"/>
+
+    <!-- The text to display as placeholder text in the text input area. -->
+    <attr format="string" name="placeholderText"/>
+    <!-- TextAppearance of the placeholder text displayed in the text input area. -->
+    <attr format="reference" name="placeholderTextAppearance"/>
+    <!-- Text color of the placeholder text displayed in the text input area.
+         If set, this takes precedence over placeholderTextAppearance. -->
+    <attr format="color" name="placeholderTextColor"/>
+
+    <!-- The text to display as prefix text in the text input area. -->
+    <attr format="string" name="prefixText"/>
+    <!-- TextAppearance of the prefix text displayed in the text input area. -->
+    <attr format="reference" name="prefixTextAppearance"/>
+    <!-- Text color of the prefix text displayed in the text input area.
+         If set, this takes precedence over prefixTextAppearance. -->
+    <attr format="color" name="prefixTextColor"/>
+    <!-- The text to display as suffix text in the text input area. -->
+    <attr format="string" name="suffixText"/>
+    <!-- TextAppearance of the suffix text displayed in the text input area. -->
+    <attr format="reference" name="suffixTextAppearance"/>
+    <!-- Text color of the suffix text displayed in the text input area.
+         If set, this takes precedence over suffixTextAppearance. -->
+    <attr format="color" name="suffixTextColor"/>
 
     <!-- Drawable to use for the start icon. -->
     <attr format="reference" name="startIconDrawable"/>
@@ -6883,7 +7284,13 @@
     <attr format="dimension" name="boxCornerRadiusBottomEnd"/>
     <!-- The color to use for the box's stroke when in outline box mode. -->
     <attr format="color" name="boxStrokeColor"/>
-    <!-- The color to use for the box's background color when in filled box mode. -->
+    <!-- The color to use for the box's stroke in outline box mode when an error
+         is being displayed. If not set, it defaults to errorTextColor if on
+         error state, or to counterOverflowTextColor if on overflow state. -->
+    <attr format="color" name="boxStrokeErrorColor"/>
+    <!-- The color to use for the box's background color when in filled box mode.
+         If a non-stateful color resource is specified, default colors will be used for the hover
+         and disabled states.  -->
     <attr format="color" name="boxBackgroundColor"/>
     <!-- The value to use for the box's stroke when in outline box mode, or for the underline stroke
          in filled mode. -->
@@ -7016,6 +7423,15 @@
         <!-- Menu resource to inflate to be shown in the toolbar -->
         <attr format="reference" name="menu"/>
     </declare-styleable>
+    <declare-styleable name="Tooltip">
+    <attr name="android:text"/>
+    <attr name="android:textAppearance"/>
+    <attr name="android:layout_margin"/>
+    <attr name="android:minWidth"/>
+    <attr name="android:minHeight"/>
+    <attr name="android:padding"/>
+    <attr format="color" name="backgroundTint"/>
+  </declare-styleable>
     <declare-styleable name="View">
         <!-- Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}. -->
         <attr format="dimension" name="paddingStart"/>

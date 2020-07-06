@@ -425,10 +425,10 @@ library {
   maven_library {
     groupId: "com.google.android.material"
     artifactId: "material"
-    version: "1.1.0"
+    version: "1.3.0-alpha01"
   }
   digests {
-    sha256: "X\364\373nY\206\354\216\001\2473\352\205\351\337\203\317y\006\016\003)\376\030\253\301\222\331\355\251{&"
+    sha256: "g\326#\002\026=\377\313\371&\235\205]k\335h\335=\265F\360,*\224+\230\307Z\324\315\225,"
   }
 }
 library {
@@ -449,6 +449,26 @@ library {
   }
   digests {
     sha256: "D\251\343\n\277V\257\020%\305*\n\365\006\376\351\304\023\032\245^\375\245/\237\331E\022\021\305\350\313"
+  }
+}
+library {
+  maven_library {
+    groupId: "androidx.dynamicanimation"
+    artifactId: "dynamicanimation"
+    version: "1.0.0"
+  }
+  digests {
+    sha256: "\316\000Qb\302)\2770\215-[\022\373l\255\bt\006\234\273\352\314\356c\250\031;\320\215@\336\004"
+  }
+}
+library {
+  maven_library {
+    groupId: "androidx.annotation"
+    artifactId: "annotation-experimental"
+    version: "1.0.0"
+  }
+  digests {
+    sha256: "\262\031\322\265h\347\344\272SN\t\370\302\375$#C\337l\313\337\273\3518\204o]t\016k\v\021"
   }
 }
 library {
@@ -483,12 +503,52 @@ library {
 }
 library {
   maven_library {
-    groupId: "androidx.swiperefreshlayout"
-    artifactId: "swiperefreshlayout"
+    groupId: "androidx.legacy"
+    artifactId: "legacy-support-core-utils"
     version: "1.0.0"
   }
   digests {
-    sha256: "\227a\263\250\t\311\260\223\375\006\243\304\273\306Eum\354\016\225\265\311\332A\233\311\362\243\363\002n\215"
+    sha256: "\247\355\317\001\325\265+04\a0\'\274Gu\267\212Gd\273b\002\273\221\326\034\202\232\335\215\321\307"
+  }
+}
+library {
+  maven_library {
+    groupId: "androidx.documentfile"
+    artifactId: "documentfile"
+    version: "1.0.0"
+  }
+  digests {
+    sha256: "\206Z\006\036\362\372\321e\"\370C56\270\324r\b\304o\367\307tQ\227\337\241\356\264\201\206\224\207"
+  }
+}
+library {
+  maven_library {
+    groupId: "androidx.localbroadcastmanager"
+    artifactId: "localbroadcastmanager"
+    version: "1.0.0"
+  }
+  digests {
+    sha256: "\347\0342\214\356\365\304\247\327o-\206\337\033e\326_\342\254\370h\261\244\357\330J?43a\206\330"
+  }
+}
+library {
+  maven_library {
+    groupId: "androidx.print"
+    artifactId: "print"
+    version: "1.0.0"
+  }
+  digests {
+    sha256: "\035\\\17715\241\273\246a\3747?\327.\021\353\nJ\333\2639g\207\202m\330\344\031\r]\236\335"
+  }
+}
+library {
+  maven_library {
+    groupId: "androidx.swiperefreshlayout"
+    artifactId: "swiperefreshlayout"
+    version: "1.1.0"
+  }
+  digests {
+    sha256: ",\347\220l\321\336\240Z\354\201\227]\262-T8#Y\300Z!\262Rz\330H\274`\366\262r\223"
   }
 }
 library_dependencies {
@@ -728,12 +788,14 @@ library_dependencies {
   library_dep_index: 43
   library_dep_index: 44
   library_dep_index: 6
-  library_dep_index: 14
-  library_dep_index: 7
   library_dep_index: 45
   library_dep_index: 46
-  library_dep_index: 27
+  library_dep_index: 14
+  library_dep_index: 7
   library_dep_index: 47
+  library_dep_index: 48
+  library_dep_index: 27
+  library_dep_index: 49
 }
 library_dependencies {
   library_index: 43
@@ -748,27 +810,57 @@ library_dependencies {
 }
 library_dependencies {
   library_index: 45
+  library_dep_index: 6
+  library_dep_index: 9
+  library_dep_index: 50
+}
+library_dependencies {
+  library_index: 50
+  library_dep_index: 5
+  library_dep_index: 6
+  library_dep_index: 51
+  library_dep_index: 18
+  library_dep_index: 52
+  library_dep_index: 53
+}
+library_dependencies {
+  library_index: 51
+  library_dep_index: 5
+}
+library_dependencies {
+  library_index: 52
+  library_dep_index: 5
+}
+library_dependencies {
+  library_index: 53
+  library_dep_index: 5
+}
+library_dependencies {
+  library_index: 46
+}
+library_dependencies {
+  library_index: 47
   library_dep_index: 5
   library_dep_index: 6
   library_dep_index: 23
   library_dep_index: 9
 }
 library_dependencies {
-  library_index: 46
+  library_index: 48
   library_dep_index: 5
   library_dep_index: 6
   library_dep_index: 9
 }
 library_dependencies {
-  library_index: 47
+  library_index: 49
   library_dep_index: 5
   library_dep_index: 14
-  library_dep_index: 45
+  library_dep_index: 47
   library_dep_index: 6
   library_dep_index: 9
 }
 library_dependencies {
-  library_index: 48
+  library_index: 54
   library_dep_index: 5
   library_dep_index: 6
   library_dep_index: 29
@@ -777,12 +869,12 @@ module_dependencies {
   module_name: "base"
   dependency_index: 0
   dependency_index: 32
-  dependency_index: 48
   dependency_index: 1
   dependency_index: 33
   dependency_index: 34
   dependency_index: 4
   dependency_index: 37
+  dependency_index: 54
   dependency_index: 42
   dependency_index: 12
   dependency_index: 30

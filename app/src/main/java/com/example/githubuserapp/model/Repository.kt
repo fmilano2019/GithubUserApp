@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Repository (
+data class Repository(
     @SerializedName("name")
     var name: String,
 
@@ -20,4 +20,4 @@ data class Repository (
 
     @SerializedName("forks")
     var forks: Int
-) :  Parcelable
+) : Parcelable

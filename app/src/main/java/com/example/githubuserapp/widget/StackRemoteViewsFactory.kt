@@ -14,7 +14,8 @@ import com.example.githubuserapp.activity.MainActivity
 import com.example.githubuserapp.model.User
 import com.example.githubuserapp.utils.MappingHelper
 
-class StackRemoteViewsFactory(private val context: Context) : RemoteViewsService.RemoteViewsFactory {
+class StackRemoteViewsFactory(private val context: Context) :
+    RemoteViewsService.RemoteViewsFactory {
     private var userItems = ArrayList<User>()
     private var images = ArrayList<Bitmap>()
     private var cursor: Cursor? = null
@@ -34,7 +35,8 @@ class StackRemoteViewsFactory(private val context: Context) : RemoteViewsService
 
         val identityToken = Binder.clearCallingIdentity()
 
-        cursor = context.contentResolver.query(MainActivity.URI_FAVORITE, null, null, null, null, null)
+        cursor =
+            context.contentResolver.query(MainActivity.URI_FAVORITE, null, null, null, null, null)
         userItems = MappingHelper.cursorToArrayList(cursor)
         userItems.forEachIndexed { index, _ ->
             val bitmap = Glide.with(context)
@@ -66,7 +68,7 @@ class StackRemoteViewsFactory(private val context: Context) : RemoteViewsService
         return rv
     }
 
-    override fun getCount(): Int  = images.size
+    override fun getCount(): Int = images.size
 
     override fun getViewTypeCount(): Int = 1
 
